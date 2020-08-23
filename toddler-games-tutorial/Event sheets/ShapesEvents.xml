@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ShapesEvents</name>
+    <events>
+        <variable comment="Number of shapes placed in the correct shape outline" constant="0" name="ShapesDone" sid="349171169050286" static="0" type="number">0</variable>
+        <event-block sid="980054011492535">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="665158459930864" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="908537092889223" type="System">
+                    <param id="0" name="Variable">ShapesDone</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="906247700978464" type="System">
+                    <param id="0" name="X">600</param>
+                </action>
+                <action id="-6" name="Scroll to Y" sid="986658849778156" type="System">
+                    <param id="0" name="Y">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="340165460144201">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="945778911216438" type="Square">
+                    <param id="0" name="Object">SquareCollision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="548465662392734" type="Square">
+                    <param id="0" name="Object">SquareOutline</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="596933985081863" type="Square">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="686449731739971" type="System">
+                    <param id="0" name="Variable">ShapesDone</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914451520023683">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="760765417591508" type="Circle">
+                    <param id="0" name="Object">CircleCollision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="324334256136046" type="Circle">
+                    <param id="0" name="Object">CircleOutline</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="257393369272205" type="Circle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="783948070083432" type="System">
+                    <param id="0" name="Variable">ShapesDone</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="244989910145901">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="188248922301559" type="Triangle">
+                    <param id="0" name="Object">TriangleCollision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="955849709235728" type="Triangle">
+                    <param id="0" name="Object">TriangleOutline</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="496695018868300" type="Triangle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="187071358420647" type="System">
+                    <param id="0" name="Variable">ShapesDone</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="111578993273876">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="191065021689614" type="System">
+                    <param id="0" name="Variable">ShapesDone</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="533159053366989" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="829889700552608" type="Audio">
+                    <param id="0" name="Audio file">cheer</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="637944840533631" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="243762272442838" type="Circle">
+                    <param id="0" name="Object">CircleParticles</param>
+                    <param id="1" name="Layer">&quot;Shapes&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="102188974462653" type="CircleParticles">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="-9" name="Destroy" sid="803990767957694" type="Circle" />
+                <action id="0" name="Spawn another object" sid="535841973867747" type="Square">
+                    <param id="0" name="Object">SquareParticles</param>
+                    <param id="1" name="Layer">&quot;Shapes&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="497187969433523" type="SquareParticles">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="-9" name="Destroy" sid="876973241637219" type="Square" />
+                <action id="0" name="Spawn another object" sid="780397445163797" type="Triangle">
+                    <param id="0" name="Object">TriangleParticles</param>
+                    <param id="1" name="Layer">&quot;Shapes&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="881461002548524" type="TriangleParticles">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action id="-9" name="Destroy" sid="812185329636191" type="Triangle" />
+                <action id="-16" name="Wait" sid="865059356467204" type="System">
+                    <param id="0" name="Seconds">3.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="923760523920985" type="System">
+                    <param id="0" name="Layout">TitleScreen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

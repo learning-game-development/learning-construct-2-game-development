@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NumbersEvents</name>
+    <events>
+        <event-block sid="472907770331897">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="738526644197418" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Scroll to X" sid="227893860526964" type="System">
+                    <param id="0" name="X">600</param>
+                </action>
+                <action id="-6" name="Scroll to Y" sid="175993036531906" type="System">
+                    <param id="0" name="Y">400</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="572432178433943" type="System">
+                    <param id="0" name="Layer">&quot;Game01&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="989830370541154" type="System">
+                    <param id="0" name="Group name">&quot;Game1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="338037507624128" title="Game1">
+            <sub-events>
+                <event-block sid="189834955603454">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="387007064854903" type="Touch">
+                            <param id="0" name="Object">Button01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="911914988044223" type="Button01">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="582477190934595" type="Audio">
+                            <param id="0" name="Audio file">1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="982534090576406" type="System">
+                            <param id="0" name="Group name">&quot;Game1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="391412236595299" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="230819046827836" type="Button01" />
+                        <action id="-16" name="Wait" sid="727653870648059" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="961484435962925" type="System">
+                            <param id="0" name="Layer">&quot;Game01&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="109281992431953" type="System">
+                            <param id="0" name="Layer">&quot;Game02&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="780253137991476" type="System">
+                            <param id="0" name="Group name">&quot;Game2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567880519553192">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="607655586226700" type="Touch">
+                            <param id="0" name="Object">Button05</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="242211022911745" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="245666930039155" type="Button05" />
+                    </actions>
+                </event-block>
+                <event-block sid="147886705946749">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="828175118355076" type="Touch">
+                            <param id="0" name="Object">Button08</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="393021617118611" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="905616072614696" type="Button08" />
+                    </actions>
+                </event-block>
+                <event-block sid="991966253174707">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="425042116897310" type="Touch">
+                            <param id="0" name="Object">Button10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="505452578179312" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="297042068677944" type="Button10" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="356077412258946" title="Game2">
+            <sub-events>
+                <event-block sid="510270908361477">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="610099454282655" type="Touch">
+                            <param id="0" name="Object">Button03</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="747316301549176" type="Button03">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="912261154884063" type="Audio">
+                            <param id="0" name="Audio file">3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="155635354682959" type="System">
+                            <param id="0" name="Group name">&quot;Game2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="961688681468775" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="874273348158673" type="Button03" />
+                        <action id="-16" name="Wait" sid="184698624267533" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="838489852673156" type="System">
+                            <param id="0" name="Layer">&quot;Game02&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="848412704856470" type="System">
+                            <param id="0" name="Layer">&quot;Game03&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="925194779395960" type="System">
+                            <param id="0" name="Group name">&quot;Game3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533702970097881">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="843407959547944" type="Touch">
+                            <param id="0" name="Object">Button02</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="990793414651771" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="668634504583850" type="Button02" />
+                    </actions>
+                </event-block>
+                <event-block sid="946245318886795">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="804179831182711" type="Touch">
+                            <param id="0" name="Object">Button04</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="407272233869205" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="410484600991305" type="Button04" />
+                    </actions>
+                </event-block>
+                <event-block sid="479069843311104">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="378109514762697" type="Touch">
+                            <param id="0" name="Object">Button06</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="229369134145044" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="605031857262607" type="Button06" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="464725696393109" title="Game3">
+            <sub-events>
+                <event-block sid="123717733999968">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="306956222181393" type="Touch">
+                            <param id="0" name="Object">Button05Game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="609656111668696" type="Button05Game3">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">2.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="453481145578923" type="Audio">
+                            <param id="0" name="Audio file">5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="169546643185467" type="System">
+                            <param id="0" name="Group name">&quot;Game3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="971001435846912" type="System">
+                            <param id="0" name="Seconds">0.75</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="512137990162636" type="Button05Game3" />
+                        <action id="0" name="Spawn another object" sid="585313080981337" type="NumberOrange">
+                            <param id="0" name="Object">OrangeParticles</param>
+                            <param id="1" name="Layer">&quot;Game03&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="205051453230381" type="OrangeParticles">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="662940715883053" type="NumberOrange" />
+                        <action id="0" name="Play" sid="611038178110782" type="Audio">
+                            <param id="0" name="Audio file">cheer</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="706677351804918" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="319642037805751" type="System">
+                            <param id="0" name="Layer">&quot;Game03&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="119218020174441" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="470544554914455">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="567809876718688" type="Touch">
+                            <param id="0" name="Object">Button02Game3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="847235294879694" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="965108267091502" type="Button02Game3" />
+                    </actions>
+                </event-block>
+                <event-block sid="841963131123355">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="484760690340837" type="Touch">
+                            <param id="0" name="Object">Button07</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="642655655418733" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="553041651962720" type="Button07" />
+                    </actions>
+                </event-block>
+                <event-block sid="503819678747150">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="831359169868118" type="Touch">
+                            <param id="0" name="Object">Button09</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="797803749697195" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="302079190867093" type="Button09" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Toddler Games Tutorial</name>
+    <description>Three toddler games. Letters, numbers and shapes. Online course from StackSkills.</description>
+    <version>1.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>http://skerwe.web.za</author-website>
+    <app-id>za.web.skerwe.learning.construct2.toddlergames</app-id>
+    <unique-id>2u058fhlifjio</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>960</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>TitleScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Shapes">
+            <object-type name="Circle" sid="185955641618921">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="280141936637754">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="396301443309892">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="223426637706470" speed="5">
+                        <frame duration="1" hotspotX="0.503704" hotspotY="0.503704" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\circle.png">
+                            <collision-poly>
+                                <point x="0.148148" y="0.148148" />
+                                <point x="0.496296" y="0" />
+                                <point x="0.859259" y="0.140741" />
+                                <point x="1" y="0.496296" />
+                                <point x="0.851852" y="0.851852" />
+                                <point x="0.496296" y="0.992593" />
+                                <point x="0.148148" y="0.851852" />
+                                <point x="0.00740741" y="0.496296" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CircleOutline" sid="416180533957852">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244650898627826" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\dotCircle.png">
+                            <collision-poly>
+                                <point x="0" y="0.506098" />
+                                <point x="0.14939" y="0.164634" />
+                                <point x="0.512195" y="0.0121951" />
+                                <point x="0.853659" y="0.152439" />
+                                <point x="0.97561" y="0.503049" />
+                                <point x="0.847561" y="0.835366" />
+                                <point x="0.512195" y="0.993902" />
+                                <point x="0.146341" y="0.847561" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SquareOutline" sid="284244740793732">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="813936697483333" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\dotSquare.png">
+                            <collision-poly>
+                                <point x="0.00641026" y="0.00641026" />
+                                <point x="0.99359" y="0.00641026" />
+                                <point x="0.987179" y="0.987179" />
+                                <point x="0.00641026" y="0.99359" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TriangleOutline" sid="140464537103090">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="766191574130433" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\dotTriangle.png">
+                            <collision-poly>
+                                <point x="0.247863" y="0.479339" />
+                                <point x="0.5" y="0" />
+                                <point x="0.752137" y="0.479339" />
+                                <point x="0.75641" y="0.495868" />
+                                <point x="0.995726" y="0.991736" />
+                                <point x="0.0042735" y="0.991736" />
+                                <point x="0.235043" y="0.495868" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Triangle" sid="998554634331330">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="520787270577027">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="914166941575069">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218340685883299" speed="5">
+                        <frame duration="1" hotspotX="0.502857" hotspotY="0.505618" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\triangle.png">
+                            <collision-poly>
+                                <point x="0.245714" y="0.483146" />
+                                <point x="0.497143" y="0" />
+                                <point x="0.994286" y="0.988764" />
+                                <point x="0.00571429" y="0.988764" />
+                                <point x="0.234286" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Square" sid="704541477074979">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="439358491254582">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="925287990283596">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512470537368760" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\square.png">
+                            <collision-poly>
+                                <point x="0.0078125" y="0.0078125" />
+                                <point x="0.992188" y="0.0078125" />
+                                <point x="0.992188" y="0.992188" />
+                                <point x="0.0078125" y="0.992188" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CircleParticles" sid="781285875107804">
+                <plugin id="Particles" />
+                <texture original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\circle.png" />
+            </object-type>
+            <object-type name="CircleCollision" sid="987133176354905">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="850020982946431" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SquareCollision" sid="259185641442920">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="845674668368383" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TriangleCollision" sid="882612437153049">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905868780611979" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SquareParticles" sid="637493953294488">
+                <plugin id="Particles" />
+                <texture original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\square.png" />
+            </object-type>
+            <object-type name="TriangleParticles" sid="460118789358272">
+                <plugin id="Particles" />
+                <texture original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\triangle.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Letters">
+            <object-type name="Acorn" sid="394032894577225">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="880445060271783">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="949780481818349">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480431051130194" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\acorn.png">
+                            <collision-poly>
+                                <point x="0.176471" y="0.233766" />
+                                <point x="0.5" y="0.012987" />
+                                <point x="0.666667" y="0.12987" />
+                                <point x="0.77451" y="0.480519" />
+                                <point x="0.715686" y="0.863636" />
+                                <point x="0.5" y="0.961039" />
+                                <point x="0.230392" y="0.863636" />
+                                <point x="0.0147059" y="0.681818" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Apple" sid="322848524912198">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="684004833354041">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="632434780877752">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826201171551234" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\apple.png">
+                            <collision-poly>
+                                <point x="0.208791" y="0.291304" />
+                                <point x="0.494505" y="0.278261" />
+                                <point x="0.818681" y="0.326087" />
+                                <point x="0.972527" y="0.5" />
+                                <point x="0.807693" y="0.865218" />
+                                <point x="0.532967" y="0.952174" />
+                                <point x="0.247253" y="0.926087" />
+                                <point x="0.010989" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BoxFront" sid="785877681551059">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="780830286667010" speed="5">
+                        <frame duration="1" hotspotX="0.500978" hotspotY="0.504673" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\boxFront.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.481409" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Letter" sid="111530783426708">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Pear" sid="714991300318993">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="906174472799668">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="294409963759870">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="LiteTween" sid="133317036708312">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="280954726623250" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\pear.png">
+                            <collision-poly>
+                                <point x="0.269231" y="0.225" />
+                                <point x="0.474359" y="0.1875" />
+                                <point x="0.653846" y="0.245833" />
+                                <point x="0.698718" y="0.491667" />
+                                <point x="0.897436" y="0.895833" />
+                                <point x="0.5" y="0.983333" />
+                                <point x="0.134615" y="0.9125" />
+                                <point x="0.025641" y="0.604167" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Box" sid="607158554558476">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677960509385062" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\box.png">
+                            <collision-poly>
+                                <point x="0.292776" y="0.147679" />
+                                <point x="0.490494" y="0.147679" />
+                                <point x="0.747148" y="0.14557" />
+                                <point x="0.844106" y="0.516878" />
+                                <point x="0.946768" y="0.934599" />
+                                <point x="0.0494297" y="0.934599" />
+                                <point x="0.169202" y="0.544304" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CollisionBox" sid="764264994156024">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807677975917356" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Numbers">
+            <object-type name="NumberApple" sid="799104899345853">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="292923912262529" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\apple.png">
+                            <collision-poly>
+                                <point x="0.0879121" y="0.0695652" />
+                                <point x="0.5" y="0.195652" />
+                                <point x="0.67033" y="0.26087" />
+                                <point x="0.972527" y="0.5" />
+                                <point x="0.818681" y="0.856522" />
+                                <point x="0.5" y="0.978261" />
+                                <point x="0.175824" y="0.86087" />
+                                <point x="0.010989" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button01" sid="772767413812581">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="904437566216325">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="655255485642643">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="729159941816171" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\1btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button05" sid="377125180582162">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="328995028099780">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="909774682483413">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710421101128537" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\5btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button08" sid="797296135895030">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="663999142875623">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="579193594871127" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\8btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button10" sid="398616040603978">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="701438224206292">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="871391448805804" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\10btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NumberPear" sid="330302587450383">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371997995153078" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\pear.png">
+                            <collision-poly>
+                                <point x="0.301282" y="0.195833" />
+                                <point x="0.5" y="0.0291667" />
+                                <point x="0.660256" y="0.220833" />
+                                <point x="0.769231" y="0.5" />
+                                <point x="0.878205" y="0.920833" />
+                                <point x="0.5" y="0.983333" />
+                                <point x="0.134615" y="0.9125" />
+                                <point x="0.0448718" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button02" sid="148905859166582">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="712990359319265">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="667630142046413" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\2btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button03" sid="798940102055473">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="519451365258401">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="234511743609176">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="710960052430108" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\3btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button04" sid="883950609476811">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="942954541271689">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="231573506601056" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\4btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button06" sid="919794397426735">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="679519043859662">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197193390157875" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\6btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NumberOrange" sid="413973124275425">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388887616849092" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\orange.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0.0111111" />
+                                <point x="0.838889" y="0.161111" />
+                                <point x="0.972222" y="0.5" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.5" y="0.972222" />
+                                <point x="0.161111" y="0.838889" />
+                                <point x="0.0111111" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button07" sid="618698245338534">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="549129891548404">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807238714779337" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\7btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button09" sid="397860837642477">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="991924958199375">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828879959406041" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\9btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="OrangeParticles" sid="143806973421797">
+                <plugin id="Particles" />
+                <texture original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\orange.png" />
+            </object-type>
+            <object-type name="Button02Game3" sid="673876440753346">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="391238668086744">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390586398508198" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\2btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Button05Game3" sid="792647538793546">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="136331417500940">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Flash" sid="127180898974277">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="431442863965741" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\5btn.png">
+                            <collision-poly>
+                                <point x="0.15493" y="0.15493" />
+                                <point x="0.5" y="0.0140845" />
+                                <point x="0.838028" y="0.161972" />
+                                <point x="0.964789" y="0.5" />
+                                <point x="0.823944" y="0.823944" />
+                                <point x="0.5" y="0.964789" />
+                                <point x="0.169014" y="0.830986" />
+                                <point x="0.0211268" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="TitleBackground" sid="961961794199066">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="102762024632339" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Todler Game Tutorial Resources\Artwork\titleBG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ShapesButton" sid="921963804842775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977972697305861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\shapesBtn.png">
+                        <collision-poly>
+                            <point x="0.0862069" y="0.0862069" />
+                            <point x="0.5" y="0.0402299" />
+                            <point x="0.908046" y="0.091954" />
+                            <point x="0.948276" y="0.5" />
+                            <point x="0.902299" y="0.902299" />
+                            <point x="0.5" y="0.948276" />
+                            <point x="0.091954" y="0.908046" />
+                            <point x="0.0402299" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NumbersButton" sid="902179308671745">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351509565309685" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\numBtn.png">
+                        <collision-poly>
+                            <point x="0.0862069" y="0.0862069" />
+                            <point x="0.5" y="0.0402299" />
+                            <point x="0.908046" y="0.091954" />
+                            <point x="0.948276" y="0.5" />
+                            <point x="0.902299" y="0.902299" />
+                            <point x="0.5" y="0.948276" />
+                            <point x="0.091954" y="0.908046" />
+                            <point x="0.0402299" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LettersButton" sid="678839882745033">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="191330688531610" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\ltrBtn.png">
+                        <collision-poly>
+                            <point x="0.0862069" y="0.0862069" />
+                            <point x="0.5" y="0.0402299" />
+                            <point x="0.908046" y="0.091954" />
+                            <point x="0.948276" y="0.5" />
+                            <point x="0.902299" y="0.902299" />
+                            <point x="0.5" y="0.948276" />
+                            <point x="0.091954" y="0.908046" />
+                            <point x="0.0402299" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SmallScreenBox" sid="656900788170657">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220808391485780" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="975919161487376">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="ShapesBackground" sid="276404151973830">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520043185552090" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\shapesBG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NumbersBackground" sid="768798879137374">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="726903061501183" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\countBG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LettersBackground" sid="563741080816354">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="496207474596720" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Toddler Game Tutorial Resources\Artwork\letterBG.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="290142205404102">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="TitleButtons" plugin-id="Sprite" sid="251608601956027">
+            <members>
+                <member>LettersButton</member>
+                <member>NumbersButton</member>
+                <member>ShapesButton</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="grow" sid="651553488805700" type="number" />
+                <instance-variable name="scale" sid="986476714430700" type="number" />
+            </instance-variables>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>TitleScreen.xml</layout>
+        <layout>Shapes.xml</layout>
+        <layout>Numbers.xml</layout>
+        <layout>Letters.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>TitleEvents.xml</event-sheet>
+        <event-sheet>ShapesEvents.xml</event-sheet>
+        <event-sheet>NumbersEvents.xml</event-sheet>
+        <event-sheet>LettersEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="22">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="1.m4a" />
+        <file name="1.ogg" />
+        <file name="10.m4a" />
+        <file name="10.ogg" />
+        <file name="2.m4a" />
+        <file name="2.ogg" />
+        <file name="3.m4a" />
+        <file name="3.ogg" />
+        <file name="4.m4a" />
+        <file name="4.ogg" />
+        <file name="5.m4a" />
+        <file name="5.ogg" />
+        <file name="6.m4a" />
+        <file name="6.ogg" />
+        <file name="7.m4a" />
+        <file name="7.ogg" />
+        <file name="8.m4a" />
+        <file name="8.ogg" />
+        <file name="9.m4a" />
+        <file name="9.ogg" />
+        <file name="boing.m4a" />
+        <file name="boing.ogg" />
+        <file name="button.m4a" />
+        <file name="button.ogg" />
+        <file name="cheer.m4a" />
+        <file name="cheer.ogg" />
+        <file name="wrong.m4a" />
+        <file name="wrong.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="music.m4a" />
+        <file name="music.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
