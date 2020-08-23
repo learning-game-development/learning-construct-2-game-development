@@ -1,0 +1,1035 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <variable comment="The player&apos;s current size" constant="0" name="PlayerSize" sid="920494951657207" static="0" type="number">100</variable>
+        <event-group description="" sid="857240456156423" title="Start Controls">
+            <sub-events>
+                <event-block sid="375033497398714">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="368500342609101" type="System">
+                            <param id="0" name="Variable">Mouse</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;True&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="409356454112283" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="921130053425155" type="System">
+                            <param id="0" name="Group name">&quot;Mouse&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="470933473523549">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="735795158049883" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set cursor style" sid="958980250750237" type="Mouse">
+                            <param id="0" name="Cursor style">7</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="287167817890858" type="SmallThought">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="287971549182066" type="MediumThought">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="813891334938534" type="LargeThought">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="615722166398714" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="127327089478229" type="SmallThought">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="180622539176686">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="816527607542693" type="Player">
+                            <param id="0" name="Object">RightSide</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="924282914889653" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667853230650100">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="324715603909880" type="Player">
+                            <param id="0" name="Object">LeftSide</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="261512043123423" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="744506305829420" title="Mouse">
+            <sub-events>
+                <event-block sid="318434615748427">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="529809925352308" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="168013720498477" type="Player">
+                            <param id="0" name="X">Mouse.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="311888013127406" type="Player">
+                            <param id="0" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="239041186070690" title="Level1Score">
+            <sub-events>
+                <event-block sid="379681773775993">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="138405910051904" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">141</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="600248785816778" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="676048456778875" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="729458075344047" type="MediumThought">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="654925101963557" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="894581537759911" type="MediumThought">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="554848852743009">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="209823309084183" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">211</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="659710482200040" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="397756342416305" type="LargeThought">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="674701189346334" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="101449555536136" type="LargeThought">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864363192563597">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="506917476345727" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">230</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="965838623692563" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="195990881913574" type="Audio">
+                            <param id="0" name="Audio file">win</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="929305663541140" type="LevelUp">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="731331029795024" type="System">
+                            <param id="0" name="Seconds">5.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="883365793468823" type="LevelUp">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="113469041908407" type="System" />
+                        <action id="-12" name="Set group active" sid="860816574157581" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="237217247415298" type="System">
+                            <param id="0" name="Group name">&quot;Level2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="318218877508943" type="System">
+                            <param id="0" name="Group name">&quot;Level2Score&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="220205952289860" type="System">
+                            <param id="0" name="Layout">Level2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="898360959362672" title="LargeFish">
+            <sub-events>
+                <event-block sid="762106360524188">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="996805100429487" type="System">
+                            <param id="0" name="Interval (seconds)">10.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="584858798947646" type="Function">
+                            <param id="0" name="Name">&quot;CreateLargeFishA&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="356575920859103">
+                    <conditions>
+                        <condition id="0" name="On function" sid="214449174866251" type="Function">
+                            <param id="0" name="Name">&quot;CreateLargeFishA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="233804082755976" type="System">
+                            <param id="0" name="Object to create">LargeFishA</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">1244</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="838621273191728" type="LargeFishA">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="819723948285745">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="302066735581005" type="Player">
+                            <param id="0" name="Object">LargeFishA</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="247382851829157" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="926429599818949" type="Sorry">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="846465844655076" type="Audio">
+                            <param id="0" name="Audio file">lose</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="600247013571766" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="997882170022624" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="851806666308082" type="Player" />
+                        <action id="-16" name="Wait" sid="154654454542396" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="317353910824243" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="904021026450746" type="System" />
+                        <action id="-16" name="Wait" sid="395768197896589" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="930772630305637" type="Sorry">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="175417800130972" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="462820664370870" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="137863342073283">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="878014115481606" type="Player">
+                            <param id="0" name="Object">LargeFishA</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="590228748128546" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="249096354027613" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="863990663582780" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="278156402920292" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="887123294634342" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="515206403470081" type="LargeFishA" />
+                        <action id="0" name="Play" sid="517249303133602" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="242192980306827" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="845664652248608" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="194684341350228" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393139335302894">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="109201699755924" type="LargeFishA">
+                            <param id="0" name="Object">Fish1A</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="859586745418163" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="457968371640543" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="588471404884522" type="Fish1A" />
+                        <action id="-16" name="Wait" sid="357446545038039" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="831743825800055" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="834097642519921">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="802051250794297" type="LargeFishA">
+                            <param id="0" name="Object">Fish1B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="208336011878625" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="796654020410840" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="301230225520025" type="Fish1B" />
+                        <action id="-16" name="Wait" sid="102801437895762" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="980974402477323" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993666947640638">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="725732933254809" type="LargeFishA">
+                            <param id="0" name="Object">Fish2A</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="426472958763228" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="933818621634908" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="614478235625475" type="Fish2A" />
+                        <action id="-16" name="Wait" sid="355964015807554" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="661210416562828" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721582231066657">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="624596816499808" type="LargeFishA">
+                            <param id="0" name="Object">Fish2B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="730636597830551" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="539009050781539" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="828386087735528" type="Fish2B" />
+                        <action id="-16" name="Wait" sid="970832245767008" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="132747239124694" type="LargeFishA">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="300107031810708" title="Fish1">
+            <sub-events>
+                <event-block sid="400245942654517">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="633898288730616" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="170550985587476" type="Function">
+                            <param id="0" name="Name">&quot;createFish1A&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221473503075451">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="400185969353000" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="159906740278658" type="Function">
+                            <param id="0" name="Name">&quot;createFish1B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="216350953116704">
+                    <conditions>
+                        <condition id="0" name="On function" sid="641790955962491" type="Function">
+                            <param id="0" name="Name">&quot;createFish1A&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="688992444510676" type="System">
+                            <param id="0" name="Object to create">Fish1A</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">-10</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="962663137729113">
+                    <conditions>
+                        <condition id="0" name="On function" sid="553480989246711" type="Function">
+                            <param id="0" name="Name">&quot;createFish1B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="474185920723565" type="System">
+                            <param id="0" name="Object to create">Fish1B</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">1210</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="492694389745329" type="Fish1B">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="949760135703389" type="Fish1B">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="901797381409878">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="516130133957285" type="Player">
+                            <param id="0" name="Object">Fish1A</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="931886671958398" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="670296737678686" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="500070273446342" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="478925582837182" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="624311319450682" type="Fish1A" />
+                        <action id="0" name="Play" sid="889052585134093" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="156441274781481" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="120533948004501" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="547064809418773" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="247912973836269">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="904807126955251" type="Player">
+                            <param id="0" name="Object">Fish1B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="486023184190176" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="339516952504922" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="656082009792081" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="163919640477925" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="270669656127785" type="Fish1B" />
+                        <action id="0" name="Play" sid="434754791522285" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="700335949993341" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="346683211965047" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="428858915986213" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="594782836651010" title="Fish2">
+            <sub-events>
+                <event-block sid="931167017639969">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="646211323301019" type="System">
+                            <param id="0" name="Interval (seconds)">4.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="104554223241912" type="Function">
+                            <param id="0" name="Name">&quot;createFish2A&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208634260059064">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="299089382277353" type="System">
+                            <param id="0" name="Interval (seconds)">5.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="368268034063200" type="Function">
+                            <param id="0" name="Name">&quot;createFish2B&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393153133097433">
+                    <conditions>
+                        <condition id="0" name="On function" sid="674929553704635" type="Function">
+                            <param id="0" name="Name">&quot;createFish2A&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="891203289280632" type="System">
+                            <param id="0" name="Object to create">Fish2A</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">1210</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="949379734298648" type="Fish2A">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605131447618070">
+                    <conditions>
+                        <condition id="0" name="On function" sid="850763432523774" type="Function">
+                            <param id="0" name="Name">&quot;createFish2B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="943136413560248" type="System">
+                            <param id="0" name="Object to create">Fish2B</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">-10</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="517961205733116" type="Fish2B">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="269553945403790">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="273686335521924" type="Player">
+                            <param id="0" name="Object">Fish2A</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="700118424690974" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="576290713377256" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="640588934013558" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="947284801192641" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="950012830086014" type="Fish2A" />
+                        <action id="0" name="Play" sid="640660249331767" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="527437953162776" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="892141788696775" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="886841491246714" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931670121836382">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="779895603967951" type="Player">
+                            <param id="0" name="Object">Fish2B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="948779772793979" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="288478153705509" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="340682099509901" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="259387004828803" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="599883008062162" type="Fish2B" />
+                        <action id="0" name="Play" sid="775317904741555" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="582102985393328" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="399692362749786" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="142423858316364" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="113552404456935" title="Level2">
+            <sub-events>
+                <event-block sid="600904817790249">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="199876846292267" type="System">
+                            <param id="0" name="Interval (seconds)">5.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="580709263700915" type="Function">
+                            <param id="0" name="Name">&quot;CreateLargeFishB&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737493685039154">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="365887893013430" type="System">
+                            <param id="0" name="Interval (seconds)">15.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="997978843030855" type="Function">
+                            <param id="0" name="Name">&quot;createStarfish&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575638495598812">
+                    <conditions>
+                        <condition id="0" name="On function" sid="653863004428544" type="Function">
+                            <param id="0" name="Name">&quot;CreateLargeFishB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="949329083996322" type="System">
+                            <param id="0" name="Object to create">LargeFishB</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">-10</param>
+                            <param id="3" name="Y">int(random(32, 600))</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="212681295048212" type="LargeFishB">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="423976190364759">
+                    <conditions>
+                        <condition id="0" name="On function" sid="373890732040619" type="Function">
+                            <param id="0" name="Name">&quot;createStarfish&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="672881783901195" type="System">
+                            <param id="0" name="Object to create">Starfish</param>
+                            <param id="1" name="Layer">&quot;Fish&quot;</param>
+                            <param id="2" name="X">int(random(32, 1150))</param>
+                            <param id="3" name="Y">810</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="475286044983280">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="178051273195088" type="Player">
+                            <param id="0" name="Object">LargeFishB</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="869388645276501" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="943020415657123" type="Sorry">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="340072843458561" type="Audio">
+                            <param id="0" name="Audio file">lose</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="476280526649343" type="LargeFishB">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="981334581954049" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="959011410417387" type="Player" />
+                        <action id="-16" name="Wait" sid="316355628706578" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="973584461194988" type="LargeFishB">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="560994948500789" type="System" />
+                        <action id="-16" name="Wait" sid="931157050102622" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="715699235378559" type="Sorry">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="536315443026772" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="857480543610548" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="634357485838454">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="330554409427020" type="Player">
+                            <param id="0" name="Object">LargeFishB</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="485002622611596" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">210</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="116705685681297" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="648483050333656" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="133318421232278" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="839330161730720" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="476887328174523" type="LargeFishB" />
+                        <action id="0" name="Play" sid="572850994266082" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="966566635773346" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="809922965380316" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="987369799979967" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346864272852063">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="107615555250659" type="Player">
+                            <param id="0" name="Object">Starfish</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="270667605273484" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="325400449045819" type="Player">
+                            <param id="0" name="Instance variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="636856468940588" type="ScoreBar">
+                            <param id="0" name="Width">Player.Score</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="399192777803353" type="Player">
+                            <param id="0" name="Width">PlayerSize</param>
+                            <param id="1" name="Height">PlayerSize</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="955685747774307" type="Starfish" />
+                        <action id="0" name="Play" sid="776072131705297" type="Audio">
+                            <param id="0" name="Audio file">eat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="363870077666872" type="Player">
+                            <param id="0" name="Animation">&quot;Eat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="936980780849151" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="228652784098326" type="Player">
+                            <param id="0" name="Animation">&quot;Swim&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="868965615646313" title="Level2Score">
+            <sub-events>
+                <event-block sid="348732951851153">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="948501396165879" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">141</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="519887364278027" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="659772568712814" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="531996379229526" type="MediumThought">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="341013732528446" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="490418757623428" type="MediumThought">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822697448090750">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="706264650145196" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">211</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="255643655331787" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="270024449366980" type="LargeThought">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="769770000373271" type="System">
+                            <param id="0" name="Seconds">4.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="165915907769916" type="LargeThought">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="181315350576512">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="414598589970440" type="System">
+                            <param id="0" name="Variable">PlayerSize</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">230</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="467429600978313" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="431463903007764" type="Audio">
+                            <param id="0" name="Audio file">win</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="700875001125087" type="Win">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="758281563424677" type="System">
+                            <param id="0" name="Seconds">5.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="816663686726623" type="Win">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="371829023288612" type="System" />
+                        <action id="-12" name="Set group active" sid="818283883090518" type="System">
+                            <param id="0" name="Group name">&quot;Fish2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="960966138057133" type="System">
+                            <param id="0" name="Group name">&quot;Level2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="282984491517218" type="System">
+                            <param id="0" name="Group name">&quot;Level2Score&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="113416091614316" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

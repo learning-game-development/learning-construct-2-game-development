@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleScreenEvents</name>
+    <events>
+        <event-block sid="996308926390027">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="663735663603170" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="942919479961794" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+                <action id="0" name="Play" sid="585511228352974" type="Audio">
+                    <param id="0" name="Audio file">music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="946419595647368">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="661488364221745" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TitleBackground</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="129692656266026" type="Touch">
+                    <param id="0" name="Object">TitleBackground</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="670225623145005" type="System">
+                    <param id="0" name="Layout">Instructions</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

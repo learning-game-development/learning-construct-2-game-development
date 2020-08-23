@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Feeding Fish Frenzy Tutorial</name>
+    <description>A fish feeding game online course from StackSkills</description>
+    <version>1.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>http://skerwe.web.za</author-website>
+    <app-id>za.web.skerwe.learning.construct2.feedingfishfrenzy</app-id>
+    <unique-id>3t92rkmwto652</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1200</width>
+        <height>800</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>TitleScreen</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Fish">
+            <object-type name="Fish1A" sid="335630271732343">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="911524620514583">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="805042356381883">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="821991856557965">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939908234310341" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish1.png">
+                            <collision-poly>
+                                <point x="0.189394" y="0.370787" />
+                                <point x="0.416667" y="0.359551" />
+                                <point x="0.825758" y="0.258427" />
+                                <point x="0.94697" y="0.494382" />
+                                <point x="0.833333" y="0.752809" />
+                                <point x="0.5" y="0.752809" />
+                                <point x="0.189394" y="0.629214" />
+                                <point x="0.0757576" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fish1B" sid="349020409356637">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="150670686447106">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="669645216526620">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="481170148241502">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528860792891618" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish1.png">
+                            <collision-poly>
+                                <point x="0.189394" y="0.370787" />
+                                <point x="0.416667" y="0.359551" />
+                                <point x="0.825758" y="0.258427" />
+                                <point x="0.94697" y="0.494382" />
+                                <point x="0.833333" y="0.752809" />
+                                <point x="0.5" y="0.752809" />
+                                <point x="0.189394" y="0.629214" />
+                                <point x="0.0757576" y="0.494382" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LargeFishA" sid="806845748242926">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="578096591140568">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="771020275005612">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="746314063084919">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Swim" pingpong="0" repeatcount="1" repeatto="0" sid="377591913889892" speed="5">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\largeFish.png">
+                            <collision-poly>
+                                <point x="0.0726817" y="0.542781" />
+                                <point x="0.333333" y="0.561497" />
+                                <point x="0.385965" y="0.606952" />
+                                <point x="0.401003" y="0.735294" />
+                                <point x="0.315789" y="0.81016" />
+                                <point x="0.150376" y="0.823529" />
+                                <point x="0.0350877" y="0.660428" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eat" pingpong="0" repeatcount="1" repeatto="0" sid="139271425763131" speed="5">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\largeFish2.png">
+                            <collision-poly>
+                                <point x="0.0726817" y="0.542781" />
+                                <point x="0.333333" y="0.561497" />
+                                <point x="0.385965" y="0.606952" />
+                                <point x="0.401003" y="0.735294" />
+                                <point x="0.315789" y="0.81016" />
+                                <point x="0.150376" y="0.823529" />
+                                <point x="0.0350877" y="0.660428" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LargeFishB" sid="309592106827787">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="286751404225266">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="556923013195795">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="218566436528881">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271249465857511" speed="5">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\largeFish.png">
+                            <collision-poly>
+                                <point x="0.0726817" y="0.542781" />
+                                <point x="0.333333" y="0.561497" />
+                                <point x="0.385965" y="0.606952" />
+                                <point x="0.401003" y="0.735294" />
+                                <point x="0.315789" y="0.81016" />
+                                <point x="0.150376" y="0.823529" />
+                                <point x="0.0350877" y="0.660428" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eat" pingpong="0" repeatcount="1" repeatto="0" sid="409216193256797" speed="5">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\largeFish2.png">
+                            <collision-poly>
+                                <point x="0.0726817" y="0.542781" />
+                                <point x="0.333333" y="0.561497" />
+                                <point x="0.385965" y="0.606952" />
+                                <point x="0.401003" y="0.735294" />
+                                <point x="0.315789" y="0.81016" />
+                                <point x="0.150376" y="0.823529" />
+                                <point x="0.0350877" y="0.660428" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player" sid="695909897104801">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="The player&apos;s score counter" name="Score" sid="780656402405009" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="391737551326316">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="DragDrop" sid="229736660912182">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Swim" pingpong="0" repeatcount="1" repeatto="0" sid="467383301115872" speed="1">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\player.png">
+                            <collision-poly>
+                                <point x="0.370221" y="0.400917" />
+                                <point x="0.635689" y="0.215831" />
+                                <point x="0.866316" y="0.233614" />
+                                <point x="0.985611" y="0.45935" />
+                                <point x="0.852338" y="0.832475" />
+                                <point x="0.557118" y="0.865026" />
+                                <point x="0.17297" y="0.706475" />
+                                <point x="0.2398" y="0.430259" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\player2.png">
+                            <collision-poly>
+                                <point x="0.370221" y="0.400917" />
+                                <point x="0.635689" y="0.215831" />
+                                <point x="0.866316" y="0.233614" />
+                                <point x="0.985611" y="0.45935" />
+                                <point x="0.855909" y="0.839748" />
+                                <point x="0.557118" y="0.865026" />
+                                <point x="0.17297" y="0.706475" />
+                                <point x="0.2398" y="0.430259" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Eat" pingpong="0" repeatcount="1" repeatto="0" sid="721766452602506" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\player3.png">
+                            <collision-poly>
+                                <point x="0.370221" y="0.400917" />
+                                <point x="0.635689" y="0.215831" />
+                                <point x="0.866316" y="0.233614" />
+                                <point x="0.985611" y="0.45935" />
+                                <point x="0.855909" y="0.839748" />
+                                <point x="0.557118" y="0.865026" />
+                                <point x="0.17297" y="0.706475" />
+                                <point x="0.2398" y="0.430259" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fish2A" sid="321647853764728">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="920888340084441">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="165046607707819">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="528498782519026">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Swim" pingpong="0" repeatcount="1" repeatto="0" sid="957640498436201" speed="2">
+                        <frame duration="1" hotspotX="0.502024" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish2a.png">
+                            <collision-poly>
+                                <point x="0.194332" y="0.305455" />
+                                <point x="0.364372" y="0.287272" />
+                                <point x="0.676113" y="0.396364" />
+                                <point x="0.708502" y="0.665454" />
+                                <point x="0.526316" y="0.810909" />
+                                <point x="0.263158" y="0.825455" />
+                                <point x="0.137652" y="0.734545" />
+                                <point x="0.11336" y="0.498182" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502024" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish2b.png">
+                            <collision-poly>
+                                <point x="0.194332" y="0.305455" />
+                                <point x="0.364372" y="0.287272" />
+                                <point x="0.676113" y="0.396364" />
+                                <point x="0.708502" y="0.665454" />
+                                <point x="0.526316" y="0.810909" />
+                                <point x="0.263158" y="0.825455" />
+                                <point x="0.137652" y="0.734545" />
+                                <point x="0.11336" y="0.498182" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fish2B" sid="769570225952482">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="624892758455415">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="703335397813428">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="834119040206074">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346597682688659" speed="3">
+                        <frame duration="1" hotspotX="0.502024" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish2a.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.283637" />
+                                <point x="0.473684" y="0.287272" />
+                                <point x="0.676113" y="0.396364" />
+                                <point x="0.708502" y="0.665454" />
+                                <point x="0.51417" y="0.825455" />
+                                <point x="0.255061" y="0.821818" />
+                                <point x="0.137652" y="0.734545" />
+                                <point x="0.11336" y="0.498182" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.502024" hotspotY="0.501818" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\fish2b.png">
+                            <collision-poly>
+                                <point x="0.210526" y="0.283637" />
+                                <point x="0.473684" y="0.287272" />
+                                <point x="0.676113" y="0.396364" />
+                                <point x="0.708502" y="0.665454" />
+                                <point x="0.51417" y="0.825455" />
+                                <point x="0.255061" y="0.821818" />
+                                <point x="0.137652" y="0.734545" />
+                                <point x="0.11336" y="0.498182" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Starfish" sid="632631874524129">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DestroyOutsideLayout" sid="734071179157221">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="476032947286047">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815388550184194" speed="5">
+                        <frame duration="1" hotspotX="0.506173" hotspotY="0.506173" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\starfish.png">
+                            <collision-poly>
+                                <point x="0.493827" y="0.197531" />
+                                <point x="0.790123" y="0.407407" />
+                                <point x="0.679012" y="0.802469" />
+                                <point x="0.296296" y="0.802469" />
+                                <point x="0.259259" y="0.382716" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="TitleBackground" sid="607641618693619">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630798412779295" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\titlescreen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InstructionsBackground" sid="653107124339489">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209001726824728" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\instructions.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="423436959323225">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="930898949214365">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="GameBackgrund" sid="598055287401527">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\bg.png" />
+        </object-type>
+        <object-type name="PlayButton" sid="811485231133600">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507021085846190" speed="5">
+                    <frame duration="1" hotspotX="0.501529" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\playBtn.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeftSide" sid="254415717577340">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245317458608273" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightSide" sid="133148504021138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804187239283479" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SmallThought" sid="699279110392086">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="187867981854726">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="870602491290297" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\smallThought.png">
+                        <collision-poly>
+                            <point x="0.143293" y="0.129121" />
+                            <point x="0.5" y="0.0247253" />
+                            <point x="0.835366" y="0.148352" />
+                            <point x="0.835366" y="0.5" />
+                            <point x="0.585366" y="0.626374" />
+                            <point x="0.5" y="0.980769" />
+                            <point x="0.402439" y="0.637363" />
+                            <point x="0.140244" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MediumThought" sid="586432029056297">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="679488614645097">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="824253316833887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\mediumThought.png">
+                        <collision-poly>
+                            <point x="0.143293" y="0.129121" />
+                            <point x="0.5" y="0.0247253" />
+                            <point x="0.835366" y="0.148352" />
+                            <point x="0.835366" y="0.5" />
+                            <point x="0.585366" y="0.626374" />
+                            <point x="0.5" y="0.980769" />
+                            <point x="0.402439" y="0.637363" />
+                            <point x="0.140244" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LargeThought" sid="812160703830593">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="483896875739264">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="622824392807234" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\largeThought.png">
+                        <collision-poly>
+                            <point x="0.143293" y="0.129121" />
+                            <point x="0.5" y="0.0247253" />
+                            <point x="0.835366" y="0.148352" />
+                            <point x="0.835366" y="0.5" />
+                            <point x="0.585366" y="0.626374" />
+                            <point x="0.5" y="0.980769" />
+                            <point x="0.402439" y="0.637363" />
+                            <point x="0.140244" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="694422666152855">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Seeweed1" sid="814210334784529">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="202394797590280" speed="2">
+                    <frame duration="1" hotspotX="0.50365" hotspotY="0.501873" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\seaweed1.png" />
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\seaweed1b.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Seeweed2" sid="422746145901864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="654218554721936" speed="2">
+                    <frame duration="1" hotspotX="0.503597" hotspotY="0.501976" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\seaweed2.png" />
+                    <frame duration="1" hotspotX="0.503597" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\seaweed2b.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="587881720291718">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="ScoreBarBackground" sid="574164337095666">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669938051322081" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\growthBox.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Growth" sid="469855483032021">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ScoreBar" sid="816078308600945">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="439057541596209" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GrowthGuide" sid="349721933306740">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735583446068303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\guides.png">
+                        <collision-poly>
+                            <point x="0.869565" y="0.473684" />
+                            <point x="0.869565" y="0.526316" />
+                            <point x="0.347826" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sorry" sid="308812481699457">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="227452709535488" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\sorry.png">
+                        <collision-poly>
+                            <point x="0.0683544" y="0.329268" />
+                            <point x="0.5" y="0.243902" />
+                            <point x="0.94557" y="0.262195" />
+                            <point x="0.913924" y="0.585366" />
+                            <point x="0.5" y="0.597561" />
+                            <point x="0.0620253" y="0.701219" />
+                            <point x="0.0708861" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LevelUp" sid="400826049253056">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856429091852804" speed="5">
+                    <frame duration="1" hotspotX="0.500574" hotspotY="0.503497" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\levelup.png">
+                        <collision-poly>
+                            <point x="0.0493685" y="0.300699" />
+                            <point x="0.499426" y="0.181818" />
+                            <point x="0.964409" y="0.216783" />
+                            <point x="0.973594" y="0.496504" />
+                            <point x="0.934558" y="0.601399" />
+                            <point x="0.499426" y="0.853147" />
+                            <point x="0.0493685" y="0.699301" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Win" sid="931908152632743">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="527325995097216" speed="5">
+                    <frame duration="1" hotspotX="0.500543" hotspotY="0.5" original-source="C:\Users\Quintin.Henn\Desktop\Busy Reading\01 Construct 2\Fish-Frenzy-Resources\Artwork\win.png">
+                        <collision-poly>
+                            <point x="0.0445168" y="0.280822" />
+                            <point x="0.937025" y="0.39726" />
+                            <point x="0.933768" y="0.582192" />
+                            <point x="0.0716612" y="0.547945" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>TitleScreen.xml</layout>
+        <layout>Instructions.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>TitleScreenEvents.xml</event-sheet>
+        <event-sheet>InstructionsEvents.xml</event-sheet>
+        <event-sheet>GameEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Touch" uid="3">
+            <properties>
+                <use-mouse-input>No</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="14" />
+        <global-instance type="Audio" uid="19">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="eat.m4a" />
+        <file name="eat.ogg" />
+        <file name="lose.m4a" />
+        <file name="lose.ogg" />
+        <file name="win.m4a" />
+        <file name="win.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="music.m4a" />
+        <file name="music.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
