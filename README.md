@@ -7,7 +7,9 @@ Projects, samples and templates created to learn game development in [Construct 
 :heavy_check_mark: Completed  
 :o: Incomplete
 
-### Construct 2 [Tutorials][tutorials]
+### Construct 2
+
+:link: [Tutorials][tutorials]
 
 1. :heavy_check_mark: [Beginner's guide to Construct 2](ghost-shooter-tutorial/) (Ghost Shooter)
 2. :heavy_check_mark: [How to make a Platform game](jungle-platformer-tutorial/) (Jungle Platformer)
