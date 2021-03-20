@@ -14,8 +14,6 @@ Projects, samples and templates created to learn game development in [Construct 
 1. :heavy_check_mark: [Beginner's guide to Construct 2](ghost-shooter-tutorial/) (Ghost Shooter)
 2. :heavy_check_mark: [How to make a Platform game](jungle-platformer-tutorial/) (Jungle Platformer)
 
-- [Abstract Platformer Tutorial](abstract-platformer-tutorial)
-
 ### StackSkills
 
 1. :heavy_check_mark: [Creating Kid's Games with Construct 2](toddler-games-tutorial/)

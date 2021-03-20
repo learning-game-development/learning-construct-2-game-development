@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable comment="Player score counter" constant="0" name="Score" sid="900088018475096" static="0" type="number">0</variable>
+        <event-block sid="987747365298584">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="621541983164384" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="153820325153340" type="Monster">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="303209659594665">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="513531472475925" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="760677139902117" type="Player">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="0" name="Set text" sid="345232418559222" type="Score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620050028902947">
+            <conditions>
+                <condition id="0" name="On click" sid="905974497050682" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="203199681090338" type="Player">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309101177166970">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="537629417546293" type="Bullet">
+                    <param id="0" name="Object">Monster</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="374557641258681" type="Monster">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="652986353242903" type="Bullet">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="728884345991927" type="Bullet" />
+            </actions>
+            <sub-events>
+                <event-block sid="273788512108523">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="907768364711137" type="Monster">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="583596349186269" type="Monster">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="664803788975781" type="Monster" />
+                        <action id="-10" name="Add to" sid="318056884921964" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="840892023458429">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="377601529958336" type="Monster" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="721495151863328" type="Monster">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="452844735228402">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="588957316109675" type="System">
+                    <param id="0" name="Interval (seconds)">3.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="636211257644255" type="System">
+                    <param id="0" name="Object to create">Monster</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="X">1400</param>
+                    <param id="3" name="Y">random(1024)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="903537260331971">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="447666182362371" type="Monster">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="265032756259891" type="Player" />
+            </actions>
+        </event-block>
+        <event-block sid="462047148693438">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="950050992880897" type="Monster" />
+                <condition id="-7" name="Compare instance variable" sid="158666386192403" type="Monster">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="428977960535754" type="Monster">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
