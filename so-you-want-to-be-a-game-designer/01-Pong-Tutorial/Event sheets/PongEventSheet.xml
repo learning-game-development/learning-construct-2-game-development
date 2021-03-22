@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PongEventSheet</name>
+    <events>
+        <variable comment="Score required to win the game" constant="1" name="WIN_SCORE" sid="352172041214748" static="0" type="number">2</variable>
+        <variable comment="The initial speed at which the player paddles move in pixels" constant="1" name="PADDLE_INITIAL_SPEED" sid="564746272494593" static="0" type="number">5</variable>
+        <variable comment="Compare if the game is in progress" constant="0" name="IsGameRunning" sid="458585754526368" static="0" type="number">0</variable>
+        <variable comment="Player one&apos;s score" constant="0" name="PlayerOneScore" sid="119622199300843" static="0" type="number">0</variable>
+        <variable comment="Player two&apos;s score" constant="0" name="PlayerTwoScore" sid="849674402334917" static="0" type="number">0</variable>
+        <event-group description="All game system logic" sid="197526176170975" title="System">
+            <sub-events>
+                <event-block sid="550180985587349">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="892035651074995" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="245581427347243" type="Ball">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="787973048779370" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="541194417447119">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="925528164351986" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="337195555178807" type="PlayerOneScoreText">
+                            <param id="0" name="Text">&quot;Player 1 score: &quot; &amp; PlayerOneScore</param>
+                        </action>
+                        <action id="0" name="Set text" sid="964858356455701" type="PlayerTwoScoreText">
+                            <param id="0" name="Text">&quot;Player 2 score: &quot; &amp; PlayerTwoScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689336995684451">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="681134699931274" type="System">
+                            <param id="0" name="Variable">PlayerOneScore</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">WIN_SCORE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="314900363494087" type="PlayerWinText">
+                            <param id="0" name="Text">&quot;Player 1 is the winner!&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="654922500647093" type="Function">
+                            <param id="0" name="Name">&quot;EndGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="968798277777262">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="803715338944458" type="System">
+                            <param id="0" name="Variable">PlayerTwoScore</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">WIN_SCORE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="828021952570059" type="PlayerWinText">
+                            <param id="0" name="Text">&quot;Player 2 is the winner!&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="966647896615339" type="Function">
+                            <param id="0" name="Name">&quot;EndGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="747781859882478">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="759222982640824" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="391380341126134" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="895567151755358" type="System" />
+                        <action id="-15" name="Set visible" sid="118708148567442" type="PlayerWinText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="961648494223764" type="GameStartAgainText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="153600333858452" type="System">
+                            <param id="0" name="Group name">&quot;Player 1&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="291626811313403" type="System">
+                            <param id="0" name="Group name">&quot;Player 2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="906317141626789" type="System">
+                            <param id="0" name="Group name">&quot;Ball&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="624605927021610" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All player one&apos;s paddle logic" sid="573634453072864" title="Player 1">
+            <sub-events>
+                <event-block sid="751727979163959">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="569772639585397" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="905149144762385" type="PaddlePlayerOne">
+                            <param id="0" name="Angle">-90</param>
+                            <param id="1" name="Distance">PADDLE_INITIAL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="660506414442133">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="350079744605645" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="118732247956759" type="PaddlePlayerOne">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">PADDLE_INITIAL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All player two&apos;s paddle logic" sid="594120420161995" title="Player 2">
+            <sub-events>
+                <event-block sid="417975346496079">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="223812666875900" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="206590399968487" type="PaddlePlayerTwo">
+                            <param id="0" name="Angle">-90</param>
+                            <param id="1" name="Distance">PADDLE_INITIAL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="570711138803226">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="669827114998078" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="475168202263970" type="PaddlePlayerTwo">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">PADDLE_INITIAL_SPEED</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All the ball logic" sid="470945546251474" title="Ball">
+            <sub-events>
+                <event-block sid="636897282659628">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="356771350457547" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="827691063455945" type="Ball">
+                            <param id="0" name="Speed">250</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="895597952661277" type="GameStartText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="259371966370608">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="162409471530877" type="Ball">
+                            <param id="0" name="Object">PaddlePlayerOne</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="145634547977139" type="Ball">
+                            <param id="0" name="Angle">random(30, 30)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="551392568671156" type="Ball">
+                            <param id="0" name="Speed">Ball.Bullet.Speed + 5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="540024617912605">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="304695465959733" type="Ball">
+                            <param id="0" name="Object">PaddlePlayerTwo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="237204415755661" type="Ball">
+                            <param id="0" name="Angle">random(150, 210)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="109572557902710" type="Ball">
+                            <param id="0" name="Speed">Ball.Bullet.Speed + 5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383572104805218">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="436844660052014" type="Ball">
+                            <param id="0" name="Object">ScorePlateOne</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="530283066357718" type="System">
+                            <param id="0" name="Variable">PlayerTwoScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="611961441517599" type="Function">
+                            <param id="0" name="Name">&quot;NewRound&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="266848896896368">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="968494662869773" type="Ball">
+                            <param id="0" name="Object">ScorePlateTwo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="452457562512068" type="System">
+                            <param id="0" name="Variable">PlayerOneScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="293138829227719" type="Function">
+                            <param id="0" name="Name">&quot;NewRound&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="649139933582093">
+            <conditions>
+                <condition id="0" name="On function" sid="987041599318142" type="Function">
+                    <param id="0" name="Name">&quot;NewRound&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="134463602515782" type="Ball" />
+                <action id="-3" name="Create object" sid="553614329990176" type="System">
+                    <param id="0" name="Object to create">Ball</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">442</param>
+                    <param id="3" name="Y">256</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="116913703591074" type="Ball">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="729708808699972" type="GameStartText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331699575367453">
+            <conditions>
+                <condition id="0" name="On function" sid="112831321673441" type="Function">
+                    <param id="0" name="Name">&quot;EndGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="908470998657841" type="GameStartText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="576632976518261" type="PlayerWinText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="131519568969952" type="System">
+                    <param id="0" name="Variable">IsGameRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="534414910295635" type="System">
+                    <param id="0" name="Group name">&quot;Player 1&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="904107790053254" type="System">
+                    <param id="0" name="Group name">&quot;Player 2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="257358406446789" type="System">
+                    <param id="0" name="Group name">&quot;Ball&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="192818727745891" type="GameStartAgainText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

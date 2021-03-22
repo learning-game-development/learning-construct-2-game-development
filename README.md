@@ -23,6 +23,10 @@ Projects, samples and templates created to learn game development in [Construct 
 
 1. :o: [How to make a Space Shooter - Construct 2 Course](space-shooter-tutorial/)
 
+### ebooks
+
+1. :o: [So You Want to Be a Game Designer](so-you-want-to-be-a-game-designer/)
+
 ## :page_with_curl: License
 
 The source code is free -- see the [LICENSE](LICENSE) file for details
