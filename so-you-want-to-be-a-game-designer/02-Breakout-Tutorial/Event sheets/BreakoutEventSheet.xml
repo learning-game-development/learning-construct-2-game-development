@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BreakoutEventSheet</name>
+    <events>
+        <variable comment="The player&apos;s total score" constant="0" name="Score" sid="813762992425367" static="0" type="number">0</variable>
+        <variable comment="The player&apos;s remaining lives" constant="0" name="Lives" sid="890687174105988" static="0" type="number">3</variable>
+        <variable comment="Is the game in progress" constant="0" name="IsGameRunning" sid="369129277840116" static="0" type="number">0</variable>
+        <event-group description="All game system logic" sid="300677302405847" title="System">
+            <sub-events>
+                <event-block sid="865340238916827">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="535590724462923" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="865752806247892" type="Ball">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869502978060297">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="815371085827248" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="554952218026921" type="ScoreText">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="420624438742640" type="LivesText">
+                            <param id="0" name="Text">&quot;Lives: &quot; &amp; Lives</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All the ball logic" sid="456352426404059" title="Ball">
+            <sub-events>
+                <event-block sid="353149659342617">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="899088698674558" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="162454883807418" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="898149314699501" type="Ball">
+                            <param id="0" name="Speed">250</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="971450265639185" type="Ball">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="903065055973759" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="161528867598310">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="346478672926148" type="Ball">
+                            <param id="0" name="Object">Paddle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="543477279844127" type="Ball">
+                            <param id="0" name="Angle">random(170, 350)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502448472482966">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="124752493685160" type="Ball">
+                            <param id="0" name="Object">Wall</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="936361107009879" type="Ball">
+                            <param id="0" name="Object">Wall</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="589799728974383">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="586588800741892" type="Ball" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="148472758548448" type="Ball">
+                            <param id="0" name="X">430</param>
+                            <param id="1" name="Y">380</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="560724883723177" type="Ball">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="828825495726788" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="113852843999496" type="System">
+                            <param id="0" name="Variable">IsGameRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319631374141330">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="854164712101026" type="Ball">
+                            <param id="0" name="Object">Block</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="981967461795362" type="Ball">
+                            <param id="0" name="Object">Block</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="658357847156550" type="Block" />
+                        <action id="-10" name="Add to" sid="233362278034707" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="123102683994669">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="993884345551187" type="Ball">
+                            <param id="0" name="Object">DoubleBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="291063985804347" type="Ball">
+                            <param id="0" name="Object">DoubleBlock</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="610484622918880">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="666978409676535" type="DoubleBlock">
+                                    <param id="0" name="Instance variable">hits</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="129271160643758" type="DoubleBlock">
+                                    <param id="0" name="Instance variable">hits</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="254529232738887" type="DoubleBlock">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="677659303648650">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="986972501371435" type="DoubleBlock">
+                                    <param id="0" name="Instance variable">hits</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="299632890393276" type="DoubleBlock" />
+                                <action id="-10" name="Add to" sid="680623893769687" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="231904230115415">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="699673427641911" type="Ball">
+                            <param id="0" name="Object">BonusBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="812867703999373" type="Ball">
+                            <param id="0" name="Object">DoubleBlock</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="306756279936723" type="BonusBlock" />
+                        <action id="-10" name="Add to" sid="919449007185914" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="646826382655760" type="BonusBlock">
+                            <param id="0" name="Object">PickupGood</param>
+                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666176134907999">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="993800814887955" type="Ball">
+                            <param id="0" name="Object">BogusBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="4" name="Bounce off object" sid="316215631506074" type="Ball">
+                            <param id="0" name="Object">DoubleBlock</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="773490705224724" type="BogusBlock" />
+                        <action id="-10" name="Add to" sid="353631762435665" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="747202039995492" type="BogusBlock">
+                            <param id="0" name="Object">PickupBad</param>
+                            <param id="1" name="Layer">&quot;GameLayer&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="All the paddle logic" sid="430420800269237" title="Paddle">
+            <sub-events>
+                <event-block sid="975344102154176">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="460419877602636" type="Paddle">
+                            <param id="0" name="Object">PickupBad</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="801939971526486" type="Paddle">
+                            <param id="0" name="Width">64</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="694690473068083" type="PickupBad" />
+                    </actions>
+                </event-block>
+                <event-block sid="514950302036342">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="440756513545128" type="Paddle">
+                            <param id="0" name="Object">PickupGood</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="637025287151386" type="Paddle">
+                            <param id="0" name="Width">128</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="730707840135155" type="PickupGood" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="921738106207043">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="873700682045361" type="Blocks" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

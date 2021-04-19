@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Breakout</name>
+    <description>Breakout: classic game tutorial</description>
+    <version>1.0.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>http://skerwe.web.za</author-website>
+    <app-id>za.web.skerwe.learning.construct2.breakout</app-id>
+    <unique-id>2whrbqiqvo0c2</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Keyboard" sid="898662680645869">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Wall" sid="858851964125550">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="608685810410659">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453407511197453" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BreakoutBackground" sid="230776337414921">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\breakoutbackground.png" />
+        </object-type>
+        <object-type name="Paddle" sid="821998655192360">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="728270842926165">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="115431263360162">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277214453820459" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\paddle.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ball" sid="676537414971945">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="236140956611793">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630245315872900" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\ball.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BogusBlock" sid="691463484666163">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="494823496270639">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558275588986049" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\bogusblock.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BonusBlock" sid="762811493023219">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="862427610869999">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184891328340905" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\bonusblock.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Block" sid="686141664599490">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="549471603068891">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499471147017953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\block1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DoubleBlock" sid="850853910693958">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Block requires double the hist to break" name="hits" sid="171524265605151" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="175287203328478">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="824207753638209" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\block2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\block1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PickupGood" sid="963653497993126">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="968322753005992">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="677017384386480">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="897398568535602">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804040851327452" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\pickup-good.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PickupBad" sid="265039965487285">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="526019132613336">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="924977315371803">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="354803276164646">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683271408222877" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\so-you-want-to-be-a-game-designer\game-art-assets\pickup-bad.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.15625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.71875" y="0.71875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="747149089272763">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LivesText" sid="241896333438405">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayButton" sid="432475001286451">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="829080919013110">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Instructions" sid="403849354502267">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Blocks" plugin-id="Sprite" sid="592936399705652">
+            <members>
+                <member>Block</member>
+                <member>BogusBlock</member>
+                <member>BonusBlock</member>
+                <member>DoubleBlock</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>BreakoutLevel1.xml</layout>
+        <layout>BreakoutLevel2.xml</layout>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>BreakoutEventSheet.xml</event-sheet>
+        <event-sheet>MenuEventSheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="0" />
+        <global-instance type="Mouse" uid="107" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -6,7 +6,7 @@
     <author>Quintin Henn</author>
     <author-email>quintin.henn@gmail.com</author-email>
     <author-website>http://skerwe.web.za</author-website>
-    <app-id>tutorial.pong</app-id>
+    <app-id>za.web.skerwe.learning.construct2.pong</app-id>
     <unique-id>2da0f9vgj6k0s</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuEventSheet</name>
+    <events>
+        <event-block any="1" sid="477366810988510">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="232227348028646" type="Keyboard">
+                    <param id="0" name="Key">80</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="490451722398458" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PlayButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="970837268354934" type="System">
+                    <param id="0" name="Layout">&quot;BreakoutLevel1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
