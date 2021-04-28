@@ -34,7 +34,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Menu</first-layout>
+    <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -257,7 +257,7 @@
     <layout-folder>
         <layout>BreakoutLevel1.xml</layout>
         <layout>BreakoutLevel2.xml</layout>
-        <layout>Menu.xml</layout>
+        <layout>MainMenu.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>BreakoutEventSheet.xml</event-sheet>

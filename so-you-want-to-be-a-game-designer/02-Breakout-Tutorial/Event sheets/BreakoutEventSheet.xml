@@ -31,6 +31,35 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="921738106207043">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="873700682045361" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="913198967118631" type="System">
+                            <param id="0" name="Layout">BreakoutLevel2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859722778475366">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="568849129909683" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="667978039674266" type="System">
+                            <param id="0" name="Layout">MainMenu</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="342929481865096" type="System" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="All the ball logic" sid="456352426404059" title="Ball">
@@ -246,11 +275,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="921738106207043">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="873700682045361" type="Blocks" />
-            </conditions>
-            <actions />
-        </event-block>
     </events>
 </c2eventsheet>
