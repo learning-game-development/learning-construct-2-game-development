@@ -22,6 +22,8 @@ Projects, samples and templates created to learn game development in [Construct 
 ### YouTube Tutorials and Courses
 
 1. :o: [How to make a Space Shooter - Construct 2 Course](space-shooter-tutorial/)
+2. :o: [Developing Games with Construct 2](developing-games-with-construct-2/) (Channel 9)
+3. :o: [MSA School Game Development Series](msa-school-game-development-series/) (Channel 9)
 
 ### :books: eBooks Tutorials and Courses
 
