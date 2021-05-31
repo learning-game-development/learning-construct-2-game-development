@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="IsGameOver" sid="455972832648639" static="0" type="number">0</variable>
         <variable comment="Player score counter" constant="0" name="Score" sid="900088018475096" static="0" type="number">0</variable>
         <event-block sid="987747365298584">
             <conditions>
@@ -11,6 +12,10 @@
             <actions>
                 <action id="-8" name="Set angle" sid="153820325153340" type="Monster">
                     <param id="0" name="Angle">random(360)</param>
+                </action>
+                <action id="-9" name="Set value" sid="873476808986192" type="System">
+                    <param id="0" name="Variable">IsGameOver</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -26,6 +31,37 @@
                 <action id="0" name="Set text" sid="345232418559222" type="Score">
                     <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="452844735228402">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="588957316109675" type="System">
+                    <param id="0" name="Interval (seconds)">3.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="636211257644255" type="System">
+                    <param id="0" name="Object to create">Monster</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="X">1400</param>
+                    <param id="3" name="Y">random(1024)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="711892065224781">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="723219505226950" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="103664298679404" type="System">
+                    <param id="0" name="Variable">IsGameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="668980420080155" type="System" />
+                <action id="-26" name="Restart layout" sid="275569386555427" type="System" />
             </actions>
         </event-block>
         <event-block sid="620050028902947">
@@ -60,6 +96,10 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="728884345991927" type="Bullet" />
+                <action id="-10" name="Add to" sid="833119092177025" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="273788512108523">
@@ -79,7 +119,7 @@
                         <action id="-9" name="Destroy" sid="664803788975781" type="Monster" />
                         <action id="-10" name="Add to" sid="318056884921964" type="System">
                             <param id="0" name="Variable">Score</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                     </actions>
                 </event-block>
@@ -96,21 +136,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="452844735228402">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="588957316109675" type="System">
-                    <param id="0" name="Interval (seconds)">3.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="636211257644255" type="System">
-                    <param id="0" name="Object to create">Monster</param>
-                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                    <param id="2" name="X">1400</param>
-                    <param id="3" name="Y">random(1024)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="903537260331971">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="447666182362371" type="Monster">
@@ -119,6 +144,13 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="265032756259891" type="Player" />
+                <action id="-15" name="Set visible" sid="640143359330203" type="GameOver">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="680610761277385" type="System">
+                    <param id="0" name="Variable">IsGameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="462047148693438">
@@ -135,6 +167,14 @@
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="262195054742142">
+            <conditions>
+                <condition id="-9" inverted="1" name="Is visible" sid="530336440182641" type="Bullet" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="414116245315597" type="Bullet" />
             </actions>
         </event-block>
     </events>

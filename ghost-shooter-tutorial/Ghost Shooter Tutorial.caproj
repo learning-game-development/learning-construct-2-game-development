@@ -8,7 +8,7 @@
     <author-website>http://skerwe.web.za</author-website>
     <app-id>za.web.skerwe.learning.construct2.ghostshooter</app-id>
     <unique-id>1kod52krjw2ju</unique-id>
-    <saved-with-version>27700</saved-with-version>
+    <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -157,6 +157,9 @@
             <plugin id="Keyboard" />
         </object-type>
         <object-type name="Score" sid="702360375214430">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="GameOver" sid="572307554314087">
             <plugin id="Text" />
         </object-type>
     </object-folder>
