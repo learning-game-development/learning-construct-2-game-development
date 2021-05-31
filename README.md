@@ -27,7 +27,7 @@ Projects, samples and templates created to learn game development in [Construct 
 
 ### :books: eBooks Tutorials and Courses
 
-1. :o: [So You Want to Be a Game Designer](so-you-want-to-be-a-game-designer/)
+1. :file_folder: [So You Want to Be a Game Designer](so-you-want-to-be-a-game-designer/)
 
 ## :page_with_curl: License
 
