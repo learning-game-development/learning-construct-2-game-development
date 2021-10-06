@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Breakout</name>
+    <name>Breakout Clone</name>
     <description>Breakout: classic game tutorial</description>
     <version>1.0.0.0</version>
     <author>Quintin Henn</author>
@@ -8,7 +8,7 @@
     <author-website>http://skerwe.web.za</author-website>
     <app-id>za.web.skerwe.learning.construct2.breakout</app-id>
     <unique-id>2whrbqiqvo0c2</unique-id>
-    <saved-with-version>27900</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>

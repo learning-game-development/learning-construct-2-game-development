@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Pong</name>
+    <name>Pong Clone</name>
     <description>Pong: classic game tutorial</description>
     <version>1.0.0.0</version>
     <author>Quintin Henn</author>
@@ -8,7 +8,7 @@
     <author-website>http://skerwe.web.za</author-website>
     <app-id>za.web.skerwe.learning.construct2.pong</app-id>
     <unique-id>2da0f9vgj6k0s</unique-id>
-    <saved-with-version>27900</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>

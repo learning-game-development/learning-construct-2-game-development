@@ -8,7 +8,8 @@
 ## :beginner: Game Tutorials
 
 1. :heavy_check_mark: Pong
-2. :o: Breakout
+2. :heavy_check_mark: Breakout
+3. :o: Asteroids
 
 ## :page_with_curl: License
 

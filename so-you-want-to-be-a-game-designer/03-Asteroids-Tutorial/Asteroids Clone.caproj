@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Asteroids</name>
+    <name>Asteroids Clone</name>
     <description>Asteroids: classic game tutorial</description>
     <version>1.0.0.0</version>
     <author>Quintin Henn</author>
@@ -8,7 +8,7 @@
     <author-website>http://skerwe.web.za</author-website>
     <app-id>za.web.skerwe.learning.construct2.asteroids</app-id>
     <unique-id>sfelbumv78rp</unique-id>
-    <saved-with-version>27900</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
