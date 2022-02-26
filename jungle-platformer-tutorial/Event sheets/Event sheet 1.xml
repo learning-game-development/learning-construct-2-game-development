@@ -171,6 +171,14 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="835611174123191">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="296704729463336" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="191521901256037" type="System" />
+            </actions>
+        </event-block>
         <comment>Snail</comment>
         <event-block sid="944069424392295">
             <conditions>

@@ -8,7 +8,7 @@
     <author-website>http://skerwe.web.za</author-website>
     <app-id>za.web.skerwe.learning.construct2.jungleplatformer</app-id>
     <unique-id>3fz19h8zpew6a</unique-id>
-    <saved-with-version>27700</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -328,7 +328,7 @@
         <object-type name="SnailEnemy" sid="914808267124879">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="action" sid="674437709338764" type="string" />
+                <instance-variable comment="direction" name="action" sid="674437709338764" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="552930587269400">

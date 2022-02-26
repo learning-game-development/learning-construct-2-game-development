@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PongEventSheet</name>
     <events>
-        <variable comment="Score required to win the game" constant="1" name="WIN_SCORE" sid="352172041214748" static="0" type="number">2</variable>
+        <variable comment="Score required to win the game" constant="1" name="WIN_SCORE" sid="352172041214748" static="0" type="number">3</variable>
         <variable comment="The initial speed at which the player paddles move in pixels" constant="1" name="PADDLE_INITIAL_SPEED" sid="564746272494593" static="0" type="number">5</variable>
         <variable comment="Compare if the game is in progress" constant="0" name="IsGameRunning" sid="458585754526368" static="0" type="number">0</variable>
         <variable comment="Player one&apos;s score" constant="0" name="PlayerOneScore" sid="119622199300843" static="0" type="number">0</variable>
         <variable comment="Player two&apos;s score" constant="0" name="PlayerTwoScore" sid="849674402334917" static="0" type="number">0</variable>
+        <variable comment="Speed the ball accelerate" constant="0" name="BallSpeedIncrease" sid="735206831267363" static="0" type="number">25</variable>
         <event-group description="All game system logic" sid="197526176170975" title="System">
             <sub-events>
                 <event-block sid="550180985587349">
@@ -200,7 +201,7 @@
                             <param id="0" name="Angle">random(30, 30)</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="551392568671156" type="Ball">
-                            <param id="0" name="Speed">Ball.Bullet.Speed + 5</param>
+                            <param id="0" name="Speed">Ball.Bullet.Speed + BallSpeedIncrease</param>
                         </action>
                     </actions>
                 </event-block>
@@ -215,7 +216,7 @@
                             <param id="0" name="Angle">random(150, 210)</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="109572557902710" type="Ball">
-                            <param id="0" name="Speed">Ball.Bullet.Speed + 5</param>
+                            <param id="0" name="Speed">Ball.Bullet.Speed + BallSpeedIncrease</param>
                         </action>
                     </actions>
                 </event-block>
@@ -262,12 +263,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="134463602515782" type="Ball" />
-                <action id="-3" name="Create object" sid="553614329990176" type="System">
-                    <param id="0" name="Object to create">Ball</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">442</param>
-                    <param id="3" name="Y">256</param>
+                <action id="-3" name="Set position" sid="134463602515782" type="Ball">
+                    <param id="0" name="X">442</param>
+                    <param id="1" name="Y">256</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="116913703591074" type="Ball">
                     <param id="0" name="Speed">0</param>
