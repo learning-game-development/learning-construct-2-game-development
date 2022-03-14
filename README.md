@@ -11,20 +11,20 @@ Projects, samples and templates created to learn game development in [Construct 
 
 :link: [Tutorials][tutorials]
 
-1. :heavy_check_mark: [Beginner's guide to Construct 2](ghost-shooter-tutorial/) (Ghost Shooter)
-2. :heavy_check_mark: [How to make a Platform game](jungle-platformer-tutorial/) (Jungle Platformer)
+1. :heavy_check_mark: [Beginner's guide to Construct 2](construct-tutorials/ghost-shooter-tutorial/) (Ghost Shooter)
+2. :heavy_check_mark: [How to make a Platform game](construct-tutorials/jungle-platformer-tutorial/) (Jungle Platformer)
 
 ### Online Tutorials and Courses
 
-1. :heavy_check_mark: [Creating Kid's Games with Construct 2](toddler-games-tutorial/)
-2. :heavy_check_mark: [Create a Feeding Fish Frenzy Game in Construct 2](feeding-fish-frenzy-tutorial/)
-3. :o: [The Ultimate Game Development Course with Construct 2](ultimate-game-development-course/)
+1. :heavy_check_mark: [Creating Kid's Games with Construct 2](stackskills/toddler-games-tutorial/) -- StackSkills
+2. :heavy_check_mark: [Create a Feeding Fish Frenzy Game in Construct 2](stackskills/feeding-fish-frenzy-tutorial/) -- StackSkills
+3. :o: [The Ultimate Game Development Course with Construct 2](zenva-academy/ultimate-game-development-course/) -- Zenva Academy
 
 ### YouTube Tutorials and Courses
 
-1. :o: [How to make a Space Shooter - Construct 2 Course](space-shooter-tutorial/)
-2. :o: [Developing Games with Construct 2](developing-games-with-construct-2/) (Channel 9)
-3. :o: [MSA School Game Development Series](msa-school-game-development-series/) (Channel 9)
+1. :o: [How to make a Space Shooter - Construct 2 Course](youtube/space-shooter-tutorial/) - YouTube tutorial
+2. :o: [Developing Games with Construct 2](channel9/developing-games-with-construct-2/) -- Channel 9
+3. :o: [MSA School Game Development Series](channel9/msa-school-game-development-series/) -- Channel 9
 
 ### :books: eBooks Tutorials and Courses
 
