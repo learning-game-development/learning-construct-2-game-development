@@ -2,4 +2,4 @@
 
 StackSkills online course
 
-![Kid's Games](Kid-Games.png "Kid's Games")
+![Kid's Games](screenshot.png "Kid's Games")

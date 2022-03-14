@@ -2,4 +2,4 @@
 
 StackSkills online course
 
-![Feeding Fish Frenzy](Feeding-Fish-Frenzy.png "Feeding Fish Frenzy Game")
+![Feeding Fish Frenzy](screenshot.png "Feeding Fish Frenzy Game")
