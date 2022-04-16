@@ -301,6 +301,9 @@
         </object-type>
         <object-type name="Coin" sid="957044343105514">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Is the coin clicked" name="Collected" sid="575614222841162" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="817815946412369">
                     <behavior id="Bullet" />

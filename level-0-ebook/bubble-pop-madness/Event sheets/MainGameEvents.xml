@@ -167,10 +167,16 @@
                         <condition id="3" name="On touched object" sid="978405255657223" type="Touch">
                             <param id="0" name="Object">Coin</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="374139192582522" type="Coin">
+                            <param id="0" name="Instance variable">Collected</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="563330483274134" type="Coin">
                             <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="535812091403943" type="Coin">
+                            <param id="0" name="Instance variable">Collected</param>
                         </action>
                         <action id="0" name="Play" sid="737592830823413" type="Audio">
                             <param id="0" name="Audio file">Cancel - 1</param>

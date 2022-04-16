@@ -76,7 +76,7 @@
                 </instance>
                 <instance type="FinalScoreText" uid="19">
                     <properties>
-                        <text>Your score 999!</text>
+                        <text>Your score 99!</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Bangers,-48,400,0</font>
                         <color>255,255,255</color>
@@ -89,10 +89,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>180</x>
+                        <x>190</x>
                         <y>397.5</y>
                         <z>0</z>
-                        <width>300</width>
+                        <width>277</width>
                         <height>65</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
