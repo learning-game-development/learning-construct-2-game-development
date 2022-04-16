@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Bubble Pop Madness</name>
+    <description>Level 0 eBook tutorial</description>
+    <version>1.0.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>http://skerwe.web.za</author-website>
+    <app-id>za.web.skerwe.learing.construct2.bubblepopmadness</app-id>
+    <unique-id>20z0ztz78pq4q</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>860</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>GameLayout</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="804850104319142">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="641818015620484" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\pngs\wave\wave_bg_640_860.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbleOne" sid="118513614515984">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="746010277820040" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="Pop" pingpong="0" repeatcount="1" repeatto="0" sid="632460475878136" speed="16">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501953">
+                        <collision-poly>
+                            <point x="0.244141" y="0.244141" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.757813" y="0.242188" />
+                            <point x="0.863281" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.242188" y="0.757813" />
+                            <point x="0.136719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BubbleTwo" sid="431760465820923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339409977130557" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Pop" pingpong="0" repeatcount="1" repeatto="0" sid="975324297824663" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.251953" y="0.251953" />
+                            <point x="0.5" y="0.146484" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.753906" y="0.753906" />
+                            <point x="0.5" y="0.853516" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.148438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="953701259189361">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Spawner" sid="810182523510009">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258111091036862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="845401004467406">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Life" sid="878895179054773">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Index number of each life" name="index" sid="533295440077779" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987196267790170" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\extralife--134u37401q8c0y3e41\no-border\100-percent.png">
+                        <collision-poly>
+                            <point x="0.132813" y="0.132813" />
+                            <point x="0.5" y="0.277344" />
+                            <point x="0.867188" y="0.132813" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.917969" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="741255395164614">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="OutOfBounds" sid="184788886161574">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465394548636158" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverText" sid="103943194572948">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CountText" sid="130268404342780">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartText" sid="413446890483463">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Coin" sid="957044343105514">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="817815946412369">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="914520363987400">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="485628863947026">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159823512731249" speed="5">
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\01.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\02.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\03.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\04.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\05.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503356" hotspotY="0.503356" original-source="C:\Batcave\Batcomputer\Game Development\Construct2\Level0\coins\gold_no_border\06.png">
+                        <collision-poly>
+                            <point x="0.201342" y="0.201342" />
+                            <point x="0.496644" y="0.0805369" />
+                            <point x="0.798658" y="0.201342" />
+                            <point x="0.919463" y="0.496644" />
+                            <point x="0.798658" y="0.798658" />
+                            <point x="0.496644" y="0.919463" />
+                            <point x="0.201342" y="0.798658" />
+                            <point x="0.0805369" y="0.496644" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalScoreText" sid="496405013535671">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="265098955603224">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Bubbles" plugin-id="Sprite" sid="502992545361324">
+            <members>
+                <member>BubbleOne</member>
+                <member>BubbleTwo</member>
+            </members>
+            <instance-variables>
+                <instance-variable comment="Was the bubble popped status" name="Popped" sid="988272972262587" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="443680718035744">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>GameLayout.xml</layout>
+        <layout>GameOverLayout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MainGameEvents.xml</event-sheet>
+        <event-sheet>GameOverEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="3">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="13" />
+        <global-instance type="Audio" uid="20">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Wet1.m4a" />
+        <file name="Wet1.ogg" />
+        <file name="Wet2.m4a" />
+        <file name="Wet2.ogg" />
+        <file name="Wet3.m4a" />
+        <file name="Wet3.ogg" />
+        <file name="Cancel - 1.m4a" />
+        <file name="Cancel - 1.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

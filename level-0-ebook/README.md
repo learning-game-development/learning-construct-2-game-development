@@ -7,12 +7,11 @@
 
 ## :beginner: Game Tutorials
 
-- WIP
+1. :heavy_check_mark: Bubble Pop Madness
+2. :o: I Spy
 
 ## :page_with_curl: License
 
 The source code for these games are free, I created it while following the instructions from the book link at the top of this page. See the LICENSE file at the root of this repository for details.
 
-I created all the game assets used in these games, this include pixel art, 3D models and vector art, and is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/)
-
-![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+You can read the full license of for this asset here [www.gamedeveloperstudio.com/license.php](https://www.gamedeveloperstudio.com/license.php)
