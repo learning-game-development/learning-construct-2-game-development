@@ -14,9 +14,11 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -41,24 +43,27 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">Firefox</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
         <object-type name="Platform" sid="429196440520202">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="canHaveGap" sid="501989719783137" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="606648586363608">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="Jumpthru" sid="333958800393461">
-                    <behavior id="jumpthru" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287340159472813" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\zenva-academy\Tutorial_02\assets\game_images\Platform.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.6" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\zenva-academy\Tutorial_02\assets\game_images\Platform.png">
+                        <image-point name="Left" x="0" y="0.6" />
+                        <image-point name="Right" x="1" y="0.6" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -68,6 +73,11 @@
                 <instance-variable name="isReady" sid="920357536761759" type="boolean" />
                 <instance-variable comment="Is jumping?" name="hasLeftGround" sid="362005891745446" type="boolean" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="257364628048085">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="214099386514248" speed="1.5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -106,6 +116,9 @@
                 <behavior-type name="Platform" sid="316318559519344">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="Wrap" sid="466808366972796">
+                    <behavior id="wrap" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="223719501425250" speed="5">
@@ -116,13 +129,33 @@
         <object-type name="Keyboard" sid="819689382521889">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="PlatformGap" sid="295569464099870">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="119920645550120">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699936157407685" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.232422" y="0.205" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.232422" y="0.9025" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>LevelZeroLayout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>LevelEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
