@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <variable comment="Player&apos;s score count" constant="0" name="Score" sid="424634597703872" static="0" type="number">0</variable>
+        <variable comment="The game&apos;s time limit per round" constant="0" name="Timer" sid="724859455008613" static="0" type="number">10</variable>
+        <variable comment="State of the game" constant="0" name="State" sid="679469855879848" static="0" type="number">0</variable>
+        <variable comment="Current number of objects found" constant="0" name="Index" sid="198211370109453" static="0" type="number">0</variable>
+        <variable comment="Name of the current object to find" constant="0" name="ObjectName" sid="356709506404304" static="0" type="text">None</variable>
+        <event-block sid="127346520155822">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="821092804056396" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="130019723775477" type="System" />
+                <action id="-16" name="Wait" sid="901879555978365" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="734806534622702" type="System">
+                    <param id="0" name="Variable">State</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="186030354980654" type="Function">
+                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-15" name="Set visible" sid="263504564093668" type="TimerText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="516181708753651" type="ScoreText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685398589086265">
+            <conditions>
+                <condition id="3" name="On touched object" sid="662102809565234" type="Touch">
+                    <param id="0" name="Object">Marker</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="586022375626271" type="System">
+                    <param id="0" name="Variable">State</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="615162557589647">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="938316524285119" type="System">
+                            <param id="0" name="Variable">ObjectName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Marker.name</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="864681737312096" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="0" name="Play" sid="421989521292749" type="Audio">
+                            <param id="0" name="Audio file">OK - 1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="644208566235061" type="Function">
+                            <param id="0" name="Name">&quot;PickObject&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-3" name="Create object" sid="783136615174468" type="System">
+                            <param id="0" name="Object to create">CheckMark</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">Marker.ImagePointX(&quot;Origin&quot;)</param>
+                            <param id="3" name="Y">Marker.ImagePointY(&quot;Origin&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="564607691912082">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="799367048918658" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="157659064868688" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="149729983075041" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Play" sid="187934549863936" type="Audio">
+                            <param id="0" name="Audio file">Hit1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="746026774063316">
+            <conditions>
+                <condition id="0" name="On function" sid="910374190756119" type="Function">
+                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="589763229952263">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="390800581918433" type="System">
+                            <param id="0" name="Object">Marker</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="966478964910793" type="FindText">
+                            <param id="0" name="Text">&quot;Find the &quot; &amp; Marker.name</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="295858704387649" type="System">
+                            <param id="0" name="Variable">Index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="423937543065766" type="System">
+                            <param id="0" name="Variable">ObjectName</param>
+                            <param id="1" name="Value">Marker.name</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="101430886028326" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="990940566631348">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="736727688570208" type="System">
+                    <param id="0" name="Variable">Index</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="653199434683263" type="System">
+                    <param id="0" name="Variable">State</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="325441676076139" type="FindText">
+                    <param id="0" name="Text">&quot;Congratulations! You Completed The Game.&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="273512411921245" type="TimerText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="271243367003077" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="825888940829766" type="System">
+                    <param id="0" name="Layout">MainMenuLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="660932714892122">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="765147822103801" type="System" />
+                <condition id="-14" name="Compare variable" sid="691664198771899" type="System">
+                    <param id="0" name="Variable">State</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="739511993166816" type="TimerText">
+                    <param id="0" name="Text">&quot;Timer: &quot; &amp; Timer</param>
+                </action>
+                <action id="0" name="Set text" sid="259205823327275" type="ScoreText">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="936912829152830">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="926114517881888" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="606610580270906" type="System">
+                    <param id="0" name="Variable">State</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="926926096856840" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="183289919018066">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="141125193595685" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="935885810559398" type="Audio">
+                    <param id="0" name="Audio file">RetroLaser1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="876372982705107" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="0" name="Call function" sid="569706795428980" type="Function">
+                    <param id="0" name="Name">&quot;PickObject&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="643232028218059">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="411866017410960" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="587003976559791" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
