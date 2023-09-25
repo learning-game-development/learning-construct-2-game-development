@@ -19,6 +19,10 @@ Projects, samples and templates created to learn game development in [Construct 
 1. :heavy_check_mark: [Creating Kid's Games with Construct 2](stackskills/toddler-games-tutorial/) -- StackSkills
 2. :heavy_check_mark: [Create a Feeding Fish Frenzy Game in Construct 2](stackskills/feeding-fish-frenzy-tutorial/) -- StackSkills
 3. :o: [The Ultimate Game Development Course with Construct 2](zenva-academy/ultimate-game-development-course/) -- Zenva Academy
+4. :o: Back to School Web Development and Programming Bundle: -- Zenva Academy
+   - :construction: [Section 22: Learn Construct 2](/)
+   - :construction: Section 23: Make a game from scratch in Construct 2
+   - :construction: Section 24: More On construct 2
 
 ### YouTube Tutorials and Courses
 

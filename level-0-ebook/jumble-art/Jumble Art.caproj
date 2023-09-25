@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Jumble Art</name>
+    <description>Level 0 eBook tutorial</description>
+    <version>1.0.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>https://skerwe.surge.sh/</author-website>
+    <app-id>sh.surge.skerwe.learing.construct2.jumbleart</app-id>
+    <unique-id>ac1jnszyhwni</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1366</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="144359176359884">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830378314638798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500457" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\PuzzleBackgroundCurtains.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title" sid="550268954754606">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Instructions" sid="144053859737155">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="InstructionsContainer" sid="841708744911519">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="637941001316922" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartButton" sid="881206411535518">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356023702400863" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\grey_button02.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0222222" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0222222" />
+                            <point x="0.994737" y="0.977778" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.977778" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartText" sid="202012931979283">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="624416033669545">
+            <plugin id="Touch" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>StartScreenLayout.xml</layout>
+        <layout>PuzzleLayout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>StartScreenEvents.xml</event-sheet>
+        <event-sheet>PuzzleEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="6">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

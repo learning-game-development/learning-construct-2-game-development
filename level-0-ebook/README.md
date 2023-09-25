@@ -15,10 +15,12 @@
 
 The source code for these games are free, I created it while following the instructions from the book link at the top of this page. See the LICENSE file at the root of this repository for details.
 
-You can read the full license of for this asset here [www.gamedeveloperstudio.com/license.php](https://www.gamedeveloperstudio.com/license.php)
+### The art for the games come from different sources and are group together under these licenses
 
-- Bubble Pop Madness
+- You can read the full license of for these assets here [www.gamedeveloperstudio.com/license.php](https://www.gamedeveloperstudio.com/license.php)
 
-[Kenney](www.kenney.nl) Assets are [License (Creative Commons Zero, CC0)](http://creativecommons.org/publicdomain/zero/1.0/)
+  a. Bubble Pop Madness
 
-- I Spy
+- [Kenney](www.kenney.nl) Assets are [License (Creative Commons Zero, CC0)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+  a. I Spy
