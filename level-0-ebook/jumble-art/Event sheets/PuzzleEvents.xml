@@ -2,5 +2,173 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PuzzleEvents</name>
-    <events />
+    <events>
+        <variable comment="Is the game in progress" constant="0" name="gameRunning" sid="862812769597754" static="0" type="number">0</variable>
+        <variable comment="Total number of puzzle pieces" constant="0" name="TotalPuzzlePieces" sid="515108198593777" static="0" type="number">24</variable>
+        <variable comment="Seconds to finish the puzzle" constant="0" name="Timer" sid="105085963085715" static="0" type="number">60</variable>
+        <variable comment="Number of completed puzzle pieces" constant="0" name="completed" sid="967843225230617" static="0" type="number">0</variable>
+        <event-block sid="466128889363582">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="787077448730977" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="948490556029360" type="Audio">
+                    <param id="0" name="Audio file">Sketchbook 2024-10-23</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="761656688654509" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="363183764794634">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="813068390583730" type="PuzzlePieces">
+                    <param id="0" name="Object">PuzzlePieceHolder</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="325078873312525" type="PuzzlePieces">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">PuzzlePieceHolder.index</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="DragDrop" id="1" name="Drop" sid="379131444583572" type="PuzzlePieces" />
+                <action id="-3" name="Set position" sid="228483145374354" type="PuzzlePieces">
+                    <param id="0" name="X">PuzzlePieceHolder.X</param>
+                    <param id="1" name="Y">PuzzlePieceHolder.Y</param>
+                </action>
+                <action id="0" name="Play" sid="136593169929825" type="Audio">
+                    <param id="0" name="Audio file">Big Egg collect 1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="842634824613279" type="PuzzlePieces">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="583096256230441" type="System">
+                    <param id="0" name="Variable">completed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="423329224689751">
+            <conditions>
+                <condition behavior="DragDrop" id="1" name="On drag start" sid="974526522647827" type="PuzzlePieces" />
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="833934879456539" type="PuzzlePieces" />
+            </actions>
+        </event-block>
+        <event-block sid="281832258454357">
+            <conditions>
+                <condition id="-18" name="On created" sid="780214258009565" type="PuzzlePieces" />
+                <condition id="-19" name="Pick all" sid="879629299747248" type="System">
+                    <param id="0" name="Object">PuzzlePieces</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="361456868880607" type="PuzzlePieces">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action id="-16" name="Wait" sid="705192083994544" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="896443996559350" type="PuzzlePieces">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="684575429362571" type="PuzzlePieces">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="256507927825772" type="PuzzlePieces">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="619711124425137" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="870113383736341">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="362659006327267" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="801904990394506" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="258068739820743" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="865225290411138" type="TimerText">
+                    <param id="0" name="Text">Timer</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="263628912657228">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="597060813560799" type="System">
+                    <param id="0" name="Variable">completed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">TotalPuzzlePieces</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="133734056799202" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="393406624585463" type="WinText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="6" name="Stop" sid="690963996931026" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="755548407302213" type="Audio">
+                    <param id="0" name="Audio file">winfretless</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="826358103367072" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="780976041521161" type="System">
+                    <param id="0" name="Layout">StartScreenLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="575417939302403">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="111163225654916" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="165446975248396" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="546486793403305" type="LoseText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="6" name="Stop" sid="590149140010681" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="472563083351612" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="277270005111318" type="System">
+                    <param id="0" name="Layout">StartScreenLayout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

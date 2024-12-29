@@ -2,5 +2,24 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>StartScreenEvents</name>
-    <events />
+    <events>
+        <event-block sid="399374781646102">
+            <conditions>
+                <condition id="3" name="On touched object" sid="195646950696749" type="Touch">
+                    <param id="0" name="Object">StartButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="562402114499409" type="Audio">
+                    <param id="0" name="Audio file">Fruit collect 1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="238379631276477" type="System">
+                    <param id="0" name="Layout">PuzzleLayout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

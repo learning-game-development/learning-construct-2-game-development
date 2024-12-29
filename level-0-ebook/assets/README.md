@@ -13,5 +13,12 @@ The art for the games come from different sources and are group together under t
    - Buttons (Jumble Art)
 
 3. MorgueFile [license](https://morguefile.com/license)
-   - All the puzzle pieces (Jumble Art)
    - PuzzleBackgroundCurtains.jpg (Jumble Art)
+
+4. The puzzle pieces is from the wallpaper of [Season After Fall](https://www.facebook.com/SeasonsafterFall/).
+
+5. Music Loop Bundle - [LICENCE](music/music-loop-bundle/_LICENSE.txt)
+   - Sketchbook 2024-10-23.ogg
+
+6. [Win Jingle](https://opengameart.org/content/win-jingle) - [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+   - winfretless.ogg

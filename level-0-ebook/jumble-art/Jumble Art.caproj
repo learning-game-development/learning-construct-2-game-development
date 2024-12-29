@@ -10,11 +10,17 @@
     <unique-id>ac1jnszyhwni</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -25,6 +31,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>StartScreenLayout</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -37,55 +44,305 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Background" sid="144359176359884">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830378314638798" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500457" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\PuzzleBackgroundCurtains.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Title" sid="550268954754606">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Instructions" sid="144053859737155">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="InstructionsContainer" sid="841708744911519">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="637941001316922" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="StartButton" sid="881206411535518">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356023702400863" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\grey_button02.png">
-                        <collision-poly>
-                            <point x="0.00526316" y="0.0222222" />
-                            <point x="0.5" y="0" />
-                            <point x="0.994737" y="0.0222222" />
-                            <point x="0.994737" y="0.977778" />
-                            <point x="0.5" y="1" />
-                            <point x="0.00526316" y="0.977778" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="StartText" sid="202012931979283">
-            <plugin id="Text" />
-        </object-type>
+        <object-folder name="UI">
+            <object-type name="InstructionsText" sid="208053804846339">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SectionContainer" sid="841708744911519">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="637941001316922" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InstructionsSidebar" sid="414638698327513">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486814471907391" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TimerText" sid="196459991883977">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="border" sid="838437842766703">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="350862213188121">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873476007126937" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WinText" sid="948030277597954">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="LoseText" sid="619244400975643">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Puzzle">
+            <object-type name="Puzzle_Background" sid="602042996934760">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686992162993724" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\jigsaw\Background.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PuzzlePieceHolder" sid="348659208654296">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="index" sid="669499062439139" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873811289290263" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PuzzlePieces" sid="395634266320499">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="203535732156271">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="685268430375619">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="743393118321766">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="24" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="150712263865265" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505882" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece01.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.788934" y="0.0117647" />
+                                <point x="0.790984" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504132" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece02.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.791322" y="0" />
+                                <point x="0.791322" y="0.796117" />
+                                <point x="0.00206612" y="0.796116" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece03.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.796117" />
+                                <point x="0" y="0.798544" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece04.png">
+                            <collision-poly>
+                                <point x="0.17069" y="0" />
+                                <point x="0.825862" y="0" />
+                                <point x="0.824138" y="0.791262" />
+                                <point x="0.17069" y="0.791262" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.505882" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece05.png" />
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.505882" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece06.png">
+                            <collision-poly>
+                                <point x="0.199187" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.199187" y="0.997059" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece07.png">
+                            <collision-poly>
+                                <point x="0" y="0.192308" />
+                                <point x="1" y="0.197115" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece08.png">
+                            <collision-poly>
+                                <point x="0.167241" y="0" />
+                                <point x="0.822414" y="0.00297619" />
+                                <point x="0.822414" y="0.997024" />
+                                <point x="0.167241" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504132" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece09.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.785124" y="0" />
+                                <point x="0.789256" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504132" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece10.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.78719" y="0" />
+                                <point x="0.78719" y="0.794117" />
+                                <point x="0.00206612" y="0.786765" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece11.png">
+                            <collision-poly>
+                                <point x="0" y="0.168033" />
+                                <point x="1" y="0.168033" />
+                                <point x="1" y="0.825819" />
+                                <point x="0" y="0.82377" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece12.png">
+                            <collision-poly>
+                                <point x="0.193089" y="0.197115" />
+                                <point x="1" y="0.199519" />
+                                <point x="1" y="1" />
+                                <point x="0.195122" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece13.png">
+                            <collision-poly>
+                                <point x="0" y="0.171488" />
+                                <point x="0.790983" y="0.167355" />
+                                <point x="0.790983" y="0.820248" />
+                                <point x="0" y="0.830578" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504132" hotspotY="0.504132" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece14.png">
+                            <collision-poly>
+                                <point x="0" y="0.171488" />
+                                <point x="0.793388" y="0.167355" />
+                                <point x="0.789256" y="0.822314" />
+                                <point x="0" y="0.822314" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504132" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece15.png">
+                            <collision-poly>
+                                <point x="0" y="0.196602" />
+                                <point x="0.791322" y="0.199029" />
+                                <point x="0.791322" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.506024" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece16.png" />
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.504951" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece17.png">
+                            <collision-poly>
+                                <point x="0.191057" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.787129" />
+                                <point x="0.195122" y="0.789604" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece18.png">
+                            <collision-poly>
+                                <point x="0.199187" y="0.196602" />
+                                <point x="1" y="0.196602" />
+                                <point x="1" y="1" />
+                                <point x="0.199187" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.506024" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece19.png" />
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.506024" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece20.png">
+                            <collision-poly>
+                                <point x="0.168966" y="0" />
+                                <point x="0.825862" y="0" />
+                                <point x="0.824138" y="0.993976" />
+                                <point x="0.168966" y="0.993976" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50505" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece21.png">
+                            <collision-poly>
+                                <point x="0.00252525" y="0.201456" />
+                                <point x="0.997475" y="0.201456" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece22.png">
+                            <collision-poly>
+                                <point x="0.197154" y="0.201456" />
+                                <point x="1" y="0.196602" />
+                                <point x="1" y="1" />
+                                <point x="0.195122" y="0.997573" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.506024" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece23.png">
+                            <collision-poly>
+                                <point x="0.197154" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.201219" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504065" hotspotY="0.504854" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\puzzle\PuzzlePiece24.png">
+                            <collision-poly>
+                                <point x="0.199187" y="0.194175" />
+                                <point x="1" y="0.199029" />
+                                <point x="1" y="1" />
+                                <point x="0.193089" y="0.995146" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="TitleScreen">
+            <object-type name="Background" sid="144359176359884">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830378314638798" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500457" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\PuzzleBackgroundCurtains.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GameTitleText" sid="550268954754606">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GameWelcomeText" sid="144053859737155">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="StartButton" sid="881206411535518">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356023702400863" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\grey_button02.png">
+                            <collision-poly>
+                                <point x="0.00526316" y="0.0222222" />
+                                <point x="0.5" y="0" />
+                                <point x="0.994737" y="0.0222222" />
+                                <point x="0.994737" y="0.977778" />
+                                <point x="0.5" y="1" />
+                                <point x="0.00526316" y="0.977778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="StartButtonText" sid="202012931979283">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Touch" sid="624416033669545">
             <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="921375589062399">
+            <plugin id="Audio" />
         </object-type>
     </object-folder>
     <families />
@@ -103,9 +360,31 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="60">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Big Egg collect 1.m4a" />
+        <file name="Big Egg collect 1.ogg" />
+        <file name="Fruit collect 1.m4a" />
+        <file name="Fruit collect 1.ogg" />
+        <file name="winfretless.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Sketchbook 2024-10-23.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
