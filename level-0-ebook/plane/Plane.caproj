@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Plane</name>
+    <description>Level 0 eBook tutorial</description>
+    <version>1.0.0.0</version>
+    <author>Quintin Henn</author>
+    <author-email>quintin.henn@gmail.com</author-email>
+    <author-website>https://skerwe.surge.sh/</author-website>
+    <app-id>sh.surge.skerwe.learing.construct2.plane</app-id>
+    <unique-id>1ele6fovxrg3q</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1366</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Game">
+            <object-type name="HomeBase" sid="752191905342408">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="893200029091587" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503937" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\sprites\buildingTiles_123.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.173228" />
+                                <point x="0.5" y="0.00787402" />
+                                <point x="0.833333" y="0.173228" />
+                                <point x="0.992424" y="0.496063" />
+                                <point x="0.825758" y="0.818898" />
+                                <point x="0.5" y="0.992126" />
+                                <point x="0.166667" y="0.826772" />
+                                <point x="0" y="0.496063" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MiniPlayerPlane" sid="863648184904632">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="516874681327653">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368001376694872" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.515152" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife1_orange.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife2_orange.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife3_orange.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerLife" sid="770490115113276">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="index" sid="385748921035478" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590928629433413" speed="0">
+                        <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife1_orange.png" />
+                        <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife2_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\UI\playerLife3_orange.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerShipOrange" sid="554366568904842">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="8Direction" sid="888047613079525">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="479820300932916">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278831484296663" speed="0">
+                        <frame duration="1" hotspotX="0.50505" hotspotY="1" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\playerShip1_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\playerShip2_orange.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\playerShip3_orange.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Missile" sid="506649065738834">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="effectUID" sid="421473186548128" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="752473151149484">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="484475104680180">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732022526062769" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\bulletBeigeSilver_outline.png">
+                            <collision-poly>
+                                <point x="0.911765" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.911765" y="0.85" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0294118" y="0.95" />
+                                <point x="0" y="0.5" />
+                                <point x="0.0294118" y="0.05" />
+                                <point x="0.5" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpawnMissile" sid="694973537212519">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="560932933965636" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TiledBackground" sid="823640984757797">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\Backgrounds\blue.png" />
+            </object-type>
+            <object-type name="MissileFireEffect" sid="545638222219782">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="723549208903305">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741648995245685" speed="8">
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\Effects\fire18.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="1" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\SpaceShooterPack\PNG\Effects\fire19.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RegularExplosion" sid="617854635878928">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="530319889668634">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="191057433697482" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion00.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505495" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion04.png" />
+                        <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion06.png" />
+                        <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion07.png" />
+                        <frame duration="1" hotspotX="0.503356" hotspotY="0.503311" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Regular explosion\regularExplosion08.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SimpleExplosion" sid="613476480205402">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="979496101685647">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984846474572858" speed="15">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion00.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.505495" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion02.png" />
+                        <frame duration="1" hotspotX="0.505155" hotspotY="0.505155" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion03.png" />
+                        <frame duration="1" hotspotX="0.504" hotspotY="0.504" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion04.png" />
+                        <frame duration="1" hotspotX="0.503704" hotspotY="0.503704" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion05.png" />
+                        <frame duration="1" hotspotX="0.503497" hotspotY="0.503497" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion06.png" />
+                        <frame duration="1" hotspotX="0.503226" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion07.png" />
+                        <frame duration="1" hotspotX="0.503145" hotspotY="0.503145" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\animations\Simple explosion\simpleExplosion08.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="GUI">
+            <object-type name="ButtonLeft" sid="239696763775936">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="990480539136428" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\OnscreenControls\shadedLight24.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0" />
+                                <point x="0.85" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.5" y="1" />
+                                <point x="0.15" y="0.85" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ButtonRight" sid="254382442199477">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999672068096982" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\OnscreenControls\shadedLight25.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.15" />
+                                <point x="0.5" y="0" />
+                                <point x="0.85" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.85" y="0.85" />
+                                <point x="0.5" y="1" />
+                                <point x="0.15" y="0.85" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayAgainButton" sid="152421636746154">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="383538720904180" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="C:\Batcave\Learning-Game-Development\learning-construct-2-game-development\level-0-ebook\assets\grey_button02.png">
+                            <collision-poly>
+                                <point x="0.00526316" y="0.0222222" />
+                                <point x="0.5" y="0" />
+                                <point x="0.994737" y="0.0222222" />
+                                <point x="0.994737" y="0.977778" />
+                                <point x="0.5" y="1" />
+                                <point x="0.00526316" y="0.977778" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WinText" sid="479879338786366">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="WinText2" sid="551494125973917">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PlayAgainText" sid="234683693715119">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="LevelProgressIndicator" sid="834790616063255">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698610133740786" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WinBorder" sid="943090016666748">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969602663235204" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Touch" sid="169118295052393">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Keyboard" sid="111863303851214">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Function" sid="239094586774666">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Audio" sid="639616839499716">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>BlueSpaceLayout.xml</layout>
+        <layout>WinLayout.xml</layout>
+        <layout>LoseLayout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>GameEvents.xml</event-sheet>
+        <event-sheet>WinLoseEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="12" />
+        <global-instance type="Function" uid="16" />
+        <global-instance type="Audio" uid="19">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Explosion2.m4a" />
+        <file name="Explosion2.ogg" />
+        <file name="Explosion9.m4a" />
+        <file name="Explosion9.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Sketchbook 2024-11-07.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

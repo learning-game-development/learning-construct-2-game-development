@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <variable comment="Current selected animation frame" constant="0" name="playerAnimationFrame" sid="127965651424968" static="0" type="number">0</variable>
+        <variable comment="0 = game over, 1 = game in progress" constant="0" name="gameRunning" sid="818814058740028" static="0" type="number">0</variable>
+        <variable comment="Number of lives for the player" constant="0" name="lives" sid="436791071183773" static="0" type="number">3</variable>
+        <comment>Game logic</comment>
+        <event-block sid="691599426412547">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="205496852536884" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="894514220637617" type="System" />
+                <action id="5" name="Set frame" sid="237293805991233" type="PlayerShipOrange">
+                    <param id="0" name="Frame number">random(3)</param>
+                </action>
+                <action id="-9" name="Set value" sid="304346598020756" type="System">
+                    <param id="0" name="Variable">playerAnimationFrame</param>
+                    <param id="1" name="Value">PlayerShipOrange.AnimationFrame</param>
+                </action>
+                <action id="5" name="Set frame" sid="355676813758258" type="PlayerLife">
+                    <param id="0" name="Frame number">PlayerShipOrange.AnimationFrame</param>
+                </action>
+                <action id="5" name="Set frame" sid="396053780846312" type="MiniPlayerPlane">
+                    <param id="0" name="Frame number">PlayerShipOrange.AnimationFrame</param>
+                </action>
+                <action id="0" name="Play" sid="430012801520916" type="Audio">
+                    <param id="0" name="Audio file">Sketchbook 2024-11-07</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="715066204889992" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="482044616096980" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="782447642097518">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="729338962795428" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="538495271501872" type="Audio" />
+            </actions>
+        </event-block>
+        <comment>Player logic</comment>
+        <event-block any="1" sid="105216668861225">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="752517140643962" type="Touch">
+                    <param id="0" name="Object">ButtonLeft</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="627083057018325" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="869490726488227" type="PlayerShipOrange">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="987082600739367">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="359281177984282" type="Touch">
+                    <param id="0" name="Object">ButtonRight</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="109364260383404" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="646787709655414" type="PlayerShipOrange">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="189680455233980">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="405764093505865" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="964778555722884" type="System">
+                    <param id="0" name="Interval (seconds)">0.7</param>
+                </condition>
+                <condition id="-16" name="Pick random instance" sid="385764903665870" type="System">
+                    <param id="0" name="Object">SpawnMissile</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="587502599181780" type="System">
+                    <param id="0" name="Object to create">Missile</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">SpawnMissile.X</param>
+                    <param id="3" name="Y">SpawnMissile.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="814691449248243">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="259058316126899" type="MiniPlayerPlane">
+                    <param id="0" name="Object">HomeBase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="153905478358015" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="322613346443135" type="MiniPlayerPlane">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="543924456095300" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="791377764877028" type="System">
+                    <param id="0" name="Layout">WinLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="197460635531651">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="693935997910395" type="System">
+                    <param id="0" name="Variable">lives</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="745289773842271" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="774984716475509" type="System">
+                    <param id="0" name="Variable">gameRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Play" sid="937113713129146" type="Audio">
+                    <param id="0" name="Audio file">Explosion2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="165849755665179" type="System">
+                    <param id="0" name="Object to create">RegularExplosion</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">PlayerShipOrange.X</param>
+                    <param id="3" name="Y">PlayerShipOrange.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="447083914561139" type="PlayerShipOrange" />
+                <action id="-9" name="Destroy" sid="657070190776113" type="MiniPlayerPlane" />
+                <action id="-16" name="Wait" sid="729041829081769" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="553679506279100" type="System">
+                    <param id="0" name="Layout">LoseLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Missile logic</comment>
+        <event-block sid="269253514981593">
+            <conditions>
+                <condition id="-18" name="On created" sid="807196735481811" type="Missile" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="255552216308014" type="System">
+                    <param id="0" name="Object to create">MissileFireEffect</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Missile.ImagePointX(0)</param>
+                    <param id="3" name="Y">Missile.ImagePointY(0)</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="787745686423686" type="MissileFireEffect">
+                    <param id="0" name="Pin to">Missile</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="553257261935440" type="Missile">
+                    <param id="0" name="Instance variable">effectUID</param>
+                    <param id="1" name="Value">MissileFireEffect.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="630498498028627">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="695648377647766" type="Missile" />
+                <condition id="-33" name="Pick by comparison" sid="865465090737644" type="System">
+                    <param id="0" name="Object">MissileFireEffect</param>
+                    <param id="1" name="Expression">MissileFireEffect.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Missile.effectUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="229806732858763" type="MissileFireEffect" />
+            </actions>
+        </event-block>
+        <event-block sid="426496425008847">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="730929235492365" type="Missile">
+                    <param id="0" name="Object">PlayerShipOrange</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="773096041910877" type="Audio">
+                    <param id="0" name="Audio file">Explosion9</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="918525115483576" type="System">
+                    <param id="0" name="Object to create">SimpleExplosion</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Missile.X</param>
+                    <param id="3" name="Y">Missile.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="122574396602784" type="Missile" />
+                <action id="0" name="Call function" sid="512713013933443" type="Function">
+                    <param id="0" name="Name">&quot;RemoveOneLife&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="235032586127181">
+            <conditions>
+                <condition id="0" name="On function" sid="398209286294152" type="Function">
+                    <param id="0" name="Name">&quot;RemoveOneLife&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="427250307945724" type="System">
+                    <param id="0" name="Variable">lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="465889400279321">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="335570021841275" type="System">
+                            <param id="0" name="Object">PlayerLife</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="967382510024323" type="PlayerLife">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">lives</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="359203493880184" type="PlayerLife" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

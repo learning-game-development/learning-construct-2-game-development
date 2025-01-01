@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WinLoseEvents</name>
+    <events>
+        <event-block sid="179612371354101">
+            <conditions>
+                <condition id="3" name="On touched object" sid="180264239116879" type="Touch">
+                    <param id="0" name="Object">PlayAgainButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="151493243453709" type="System">
+                    <param id="0" name="Layout">BlueSpaceLayout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="266092988412512">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="354040946872278" type="System" />
+                <condition id="-14" name="Compare variable" sid="726373770234765" type="System">
+                    <param id="0" name="Variable">lives</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="619884833751146" type="PlayerShipOrange">
+                    <param id="0" name="Frame number">playerAnimationFrame</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="985205363044892" type="MissileFireEffect">
+                    <param id="0" name="Pin to">PlayerShipOrange</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="713892531110632" type="System">
+                    <param id="0" name="Group name">&quot;Win Group&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="522886439682945">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="421960967593513" type="System" />
+                <condition id="-14" name="Compare variable" sid="516627962699962" type="System">
+                    <param id="0" name="Variable">lives</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="734739551240048" type="System">
+                    <param id="0" name="Group name">&quot;Lose Group&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="794159339888481" title="Win Group">
+            <sub-events>
+                <event-block sid="135159870485776">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="128945439267975" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="154960940886229" type="PlayerShipOrange">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680630538492964">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="420606835888793" type="PlayerShipOrange">
+                            <param id="0" name="Object">WinBorder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="577596685297777" type="PlayerShipOrange" />
+                        <action id="-9" name="Destroy" sid="827978675160700" type="MissileFireEffect" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="300229540050915" title="Lose Group">
+            <sub-events>
+                <event-block sid="827777914269984">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="604633718149917" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="798579775609248" type="System">
+                            <param id="0" name="Object to create">RegularExplosion</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">random(80, 1286)</param>
+                            <param id="3" name="Y">random(80, 200)</param>
+                        </action>
+                        <action id="0" name="Play" sid="811910165573158" type="Audio">
+                            <param id="0" name="Audio file">Explosion2</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="990107740398420">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="103183580079042" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="961229340800794" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
