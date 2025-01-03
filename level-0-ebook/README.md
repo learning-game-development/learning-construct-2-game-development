@@ -12,9 +12,9 @@
 3. :heavy_check_mark: I Spy
 4. :heavy_check_mark: Jumble Art
 5. :heavy_check_mark: Plane
-6. :o: Sound Board
-7. :o: Publishing your Game
-8. :o: What’s next?
+6. :heavy_check_mark: Sound Board
+7. :heavy_check_mark: Publishing your Game
+8. :heavy_check_mark: What’s next?
 
 ## :page_with_curl: License
 
