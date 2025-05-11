@@ -17,6 +17,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Player movement</comment>
                 <event-block sid="630509358778202">
                     <conditions>
                         <condition id="2" name="Key is down" sid="338605520105813" type="Keyboard">
@@ -41,6 +42,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="758456796784500">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="861569021698576" type="Sally">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="714576576934040" type="Sally">
+                            <param id="0" name="X">800</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390973820460990">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="653852319062541" type="System" />
+                        <condition id="-1" name="Compare X" sid="690610806260300" type="Sally">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">800</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="516947587556018" type="Sally">
+                            <param id="0" name="X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Animations</comment>
                 <event-block sid="599238782845224">
                     <conditions>
                         <condition behavior="Platform" id="1" name="Compare speed" sid="833291805545831" type="SallyBox">
@@ -88,6 +117,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="855014879033369">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="497738961107392" type="Sally">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="612155548948993" type="Sally">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="487629554397686" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="400441615256723" type="Sally">
+                            <param id="0" name="Object">Stars</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="373780698585581" type="Stars">
+                            <param id="0" name="Pin to">Sally</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Jumping through gaps behaviour</comment>
                 <event-block sid="757326160455817">
                     <conditions>
                         <condition behavior="Platform" id="3" name="Is jumping" sid="349344196402415" type="SallyBox" />
@@ -100,43 +153,36 @@
                                 <condition id="1" name="Is overlapping another object" sid="860116670704764" type="SallyBox">
                                     <param id="0" name="Object">PlatformGap</param>
                                 </condition>
+                                <condition id="1" name="Is overlapping another object" sid="945608209846442" type="PlatformGap">
+                                    <param id="0" name="Object">Platform</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="958204719306041">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="945608209846442" type="PlatformGap">
-                                            <param id="0" name="Object">Platform</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="857254596652016" type="Sally">
-                                            <param id="0" name="Instance variable">isReady</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="973448301199271" type="Platform">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="144322386379851" type="System">
-                                            <param id="0" name="Seconds">0.2</param>
-                                        </action>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="151607327737821" type="Platform">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="923215084452082" type="System">
-                                            <param id="0" name="Seconds">0.2</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="158468547735474" type="Sally">
-                                            <param id="0" name="Instance variable">isReady</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="975823503206542" type="Sally">
-                                            <param id="0" name="Instance variable">hasLeftGround</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="857254596652016" type="Sally">
+                                    <param id="0" name="Instance variable">isReady</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="973448301199271" type="Platform">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="144322386379851" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="151607327737821" type="Platform">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="923215084452082" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="158468547735474" type="Sally">
+                                    <param id="0" name="Instance variable">isReady</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="975823503206542" type="Sally">
+                                    <param id="0" name="Instance variable">hasLeftGround</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="579319657887623">
                             <conditions>
@@ -146,15 +192,15 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Solid" id="0" name="Set enabled" sid="897053083330279" type="Platform">
-                                    <param id="0" name="State">1</param>
+                                <action id="-13" name="Set boolean" sid="972244297354566" type="Sally">
+                                    <param id="0" name="Instance variable">isReady</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action behavior="Platform" id="0" name="Set ignoring input" sid="385393221195086" type="SallyBox">
                                     <param id="0" name="Input">1</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="972244297354566" type="Sally">
-                                    <param id="0" name="Instance variable">isReady</param>
-                                    <param id="1" name="Value">0</param>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="897053083330279" type="Platform">
+                                    <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="893922258446810" type="System">
                                     <param id="0" name="Seconds">0.1</param>
@@ -177,6 +223,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Falling through gaps behaviour</comment>
                 <event-block sid="194756882642314">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="209659416078463" type="SallyBox">
@@ -184,7 +231,7 @@
                         </condition>
                         <condition id="-8" name="Compare two values" sid="772718329114415" type="System">
                             <param id="0" name="First value">abs(SallyBox.X-PlatformGap.X)</param>
-                            <param id="1" name="Comparison">3</param>
+                            <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">25</param>
                         </condition>
                     </conditions>
