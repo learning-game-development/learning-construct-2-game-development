@@ -1,0 +1,32 @@
+## Image formats
+*.gif   binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.bmp   binary
+*.svg   binary
+
+# Audio formats
+*.mp3   binary
+*.ogg   binary
+*.wav   binary
+
+# Video formats
+*.mov   binary
+*.avi   binary
+*.mpg   binary
+*.mpeg  binary
+*.mp4   binary
+
+# Font formats
+*.ttf   binary
+*.otf   binary
+*.woff  binary
+*.woff2 binary
+
+# Data formats
+*.json  text
+*.xml   text
+
+# Archives
+*.zip             binary
